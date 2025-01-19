@@ -1,61 +1,160 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pyro.compressible package &mdash; pyro 4.0.1.post53+g7b7c6baf documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>pyro.compressible package &#8212; pyro 4.0.1.post172+ga78743ee documentation</title>
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=359afcf4" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=ebbc836c"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["\\(", "\\)"]], "processEscapes": true, "displayMath": [["\\[", "\\]"]]}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'pyro.compressible';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="pyro.compressible.problems package" href="pyro.compressible.problems.html" />
-    <link rel="prev" title="pyro.viscous_burgers.problems package" href="pyro.viscous_burgers.problems.html" /> 
-</head>
+    <link rel="prev" title="pyro.burgers_viscous.problems package" href="pyro.burgers_viscous.problems.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="4.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-          
-          
-          <a href="index.html" class="icon icon-home">
-            pyro
-              <img src="_static/logo.gif" class="logo" alt="Logo"/>
-          </a>
-              <div class="version">
-                4.0
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">pyro basics</span></p>
-<ul>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.gif" class="logo__image only-light" alt=""/>
+    <img src="_static/logo.gif" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">pyro 4.0</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">pyro basics</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to pyro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Setting up pyro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes.html">Notes on the numerical methods</a></li>
@@ -63,110 +162,439 @@
 <li class="toctree-l1"><a class="reference internal" href="running.html">Running</a></li>
 <li class="toctree-l1"><a class="reference internal" href="output.html">Working with output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problems.html">Adding a problem</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mesh</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mesh_basics.html">Mesh overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesh-examples.html">Mesh examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spherical-mesh.html">Spherical Polar Grid</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Solvers</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="advection_basics.html">Advection solvers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="burgers_basics.html">Burgers’ Equation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compressible_basics.html">Compressible hydrodynamics solvers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compressible_compare.html">Compressible solver comparisons</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Multigrid</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="multigrid.html">Multigrid Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_basics.html">Simple Multigrid Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid-constant-coefficients.html">Constant-Coefficient Poisson Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid-variable-coeff.html">Variable Coefficient Poisson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid-general-linear.html">General Linear Elliptic Equation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hydro Solvers</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="advection_basics.html">Advection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="burgers_basics.html">Burgers’ Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compressible_basics.html">Compressible hydrodynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="diffusion_basics.html">Diffusion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="incompressible_basics.html">Incompressible hydrodynamics solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="incompressible_viscous_basics.html">Incompressible viscous hydrodynamics solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lowmach_basics.html">Low Mach number hydrodynamics solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="swe_basics.html">Shallow water solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompressible_basics.html">Incompressible hydrodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lowmach_basics.html">Low Mach number hydrodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="swe_basics.html">Shallow water hydrodynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="particles_basics.html">Particles</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Utilities</span></p>
-<ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="compressible-rt-compare.html">Comparing the Compressible Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_a_problem_jupyter.html">Defining our own problem in Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rt_average.html">Horizontal Averages of Rayleigh-Taylor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advection-error.html">Error Measurement of the <code class="docutils literal notranslate"><span class="pre">advection_fv4</span></code> Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compressible-convergence.html">Convergence of the compressible solvers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Utilities</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="analysis.html">Analysis routines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Community</span></p>
-<ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="help.html">Contributing and getting help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ack.html">Acknowledgments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ack.html#history">History</a></li>
+
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Software Reference</span></p>
-<ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="modules.html">API</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="pyro.html">pyro package</a><ul class="current">
-<li class="toctree-l3 current"><a class="reference internal" href="pyro.html#subpackages">Subpackages</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="pyro.advection.html">pyro.advection package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.advection_fv4.html">pyro.advection_fv4 package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.advection_nonuniform.html">pyro.advection_nonuniform package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.advection_rk.html">pyro.advection_rk package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.advection_weno.html">pyro.advection_weno package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.burgers.html">pyro.burgers package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.viscous_burgers.html">pyro.viscous_burgers package</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="#">pyro.compressible package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_fv4.html">pyro.compressible_fv4 package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_react.html">pyro.compressible_react package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_rk.html">pyro.compressible_rk package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_sdc.html">pyro.compressible_sdc package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_sr.html">pyro.compressible_sr package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.diffusion.html">pyro.diffusion package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.incompressible.html">pyro.incompressible package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.incompressible_viscous.html">pyro.incompressible_viscous package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.lm_atm.html">pyro.lm_atm package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.mesh.html">pyro.mesh package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.multigrid.html">pyro.multigrid package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.particles.html">pyro.particles package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.swe.html">pyro.swe package</a></li>
-<li class="toctree-l4"><a class="reference internal" href="pyro.util.html">pyro.util package</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Reference</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="modules.html">API</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active has-children"><a class="reference internal" href="pyro.html">pyro package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection.html">pyro.advection package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection.problems.html">pyro.advection.problems package</a></li>
 </ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="pyro.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pyro.html#module-pyro.plot">pyro.plot module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pyro.html#module-pyro.pyro_sim">pyro.pyro_sim module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pyro.html#module-pyro.simulation_null">pyro.simulation_null module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="pyro.html#module-pyro.test">pyro.test module</a></li>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection_fv4.html">pyro.advection_fv4 package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection_fv4.problems.html">pyro.advection_fv4.problems package</a></li>
 </ul>
-</li>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection_nonuniform.html">pyro.advection_nonuniform package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection_nonuniform.problems.html">pyro.advection_nonuniform.problems package</a></li>
 </ul>
-</li>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection_rk.html">pyro.advection_rk package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection_rk.problems.html">pyro.advection_rk.problems package</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Bibliography</span></p>
-<ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection_weno.html">pyro.advection_weno package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection_weno.problems.html">pyro.advection_weno.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.burgers.html">pyro.burgers package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.burgers.problems.html">pyro.burgers.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.burgers_viscous.html">pyro.burgers_viscous package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.burgers_viscous.problems.html">pyro.burgers_viscous.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 current active has-children"><a class="current reference internal" href="#">pyro.compressible package</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible.problems.html">pyro.compressible.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible_fv4.html">pyro.compressible_fv4 package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_fv4.problems.html">pyro.compressible_fv4.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible_react.html">pyro.compressible_react package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_react.problems.html">pyro.compressible_react.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible_rk.html">pyro.compressible_rk package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_rk.problems.html">pyro.compressible_rk.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible_sdc.html">pyro.compressible_sdc package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_sdc.problems.html">pyro.compressible_sdc.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.diffusion.html">pyro.diffusion package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.diffusion.problems.html">pyro.diffusion.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.incompressible.html">pyro.incompressible package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.incompressible.problems.html">pyro.incompressible.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.incompressible_viscous.html">pyro.incompressible_viscous package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.incompressible_viscous.problems.html">pyro.incompressible_viscous.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.lm_atm.html">pyro.lm_atm package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.lm_atm.problems.html">pyro.lm_atm.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.mesh.html">pyro.mesh package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.multigrid.html">pyro.multigrid package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.multigrid.examples.html">pyro.multigrid.examples package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.particles.html">pyro.particles package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.swe.html">pyro.swe package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.swe.problems.html">pyro.swe.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.util.html">pyro.util package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliography</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="zreferences.html">References</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">pyro</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="modules.html">pyro</a></li>
-          <li class="breadcrumb-item"><a href="pyro.html">pyro package</a></li>
-      <li class="breadcrumb-item active">pyro.compressible package</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="_sources/pyro.compressible.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2/blob/main/docs/source/pyro.compressible.rst?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2/edit/main/docs/source/pyro.compressible.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2/issues/new?title=Issue%20on%20page%20%2Fpyro.compressible.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/pyro.compressible.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>pyro.compressible package</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.BC">pyro.compressible.BC module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.BC.inflow_post_bc"><code class="docutils literal notranslate"><span class="pre">inflow_post_bc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.BC.inflow_pre_bc"><code class="docutils literal notranslate"><span class="pre">inflow_pre_bc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.BC.user"><code class="docutils literal notranslate"><span class="pre">user()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro-compressible-cgf-module">pyro.compressible.cgf module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.derives">pyro.compressible.derives module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.derives.derive_primitives"><code class="docutils literal notranslate"><span class="pre">derive_primitives()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.eos">pyro.compressible.eos module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.eos.dens"><code class="docutils literal notranslate"><span class="pre">dens()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.eos.pres"><code class="docutils literal notranslate"><span class="pre">pres()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.eos.rhoe"><code class="docutils literal notranslate"><span class="pre">rhoe()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.interface">pyro.compressible.interface module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.interface.artificial_viscosity"><code class="docutils literal notranslate"><span class="pre">artificial_viscosity()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.interface.states"><code class="docutils literal notranslate"><span class="pre">states()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro-compressible-prim-module">pyro.compressible.prim module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.riemann">pyro.compressible.riemann module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.consFlux"><code class="docutils literal notranslate"><span class="pre">consFlux()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.estimate_wave_speed"><code class="docutils literal notranslate"><span class="pre">estimate_wave_speed()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.riemann_cgf"><code class="docutils literal notranslate"><span class="pre">riemann_cgf()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.riemann_flux"><code class="docutils literal notranslate"><span class="pre">riemann_flux()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.riemann_hllc"><code class="docutils literal notranslate"><span class="pre">riemann_hllc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.riemann_hllc_lowspeed"><code class="docutils literal notranslate"><span class="pre">riemann_hllc_lowspeed()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.riemann_prim"><code class="docutils literal notranslate"><span class="pre">riemann_prim()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.simulation">pyro.compressible.simulation module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Simulation"><code class="docutils literal notranslate"><span class="pre">Simulation</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Simulation.dovis"><code class="docutils literal notranslate"><span class="pre">Simulation.dovis()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Simulation.evolve"><code class="docutils literal notranslate"><span class="pre">Simulation.evolve()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Simulation.initialize"><code class="docutils literal notranslate"><span class="pre">Simulation.initialize()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Simulation.method_compute_timestep"><code class="docutils literal notranslate"><span class="pre">Simulation.method_compute_timestep()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Simulation.write_extras"><code class="docutils literal notranslate"><span class="pre">Simulation.write_extras()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Variables"><code class="docutils literal notranslate"><span class="pre">Variables</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.cons_to_prim"><code class="docutils literal notranslate"><span class="pre">cons_to_prim()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.get_external_sources"><code class="docutils literal notranslate"><span class="pre">get_external_sources()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.get_sponge_factor"><code class="docutils literal notranslate"><span class="pre">get_sponge_factor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.prim_to_cons"><code class="docutils literal notranslate"><span class="pre">prim_to_cons()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.unsplit_fluxes">pyro.compressible.unsplit_fluxes module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.unsplit_fluxes.apply_artificial_viscosity"><code class="docutils literal notranslate"><span class="pre">apply_artificial_viscosity()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.unsplit_fluxes.apply_source_terms"><code class="docutils literal notranslate"><span class="pre">apply_source_terms()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.unsplit_fluxes.apply_transverse_flux"><code class="docutils literal notranslate"><span class="pre">apply_transverse_flux()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.unsplit_fluxes.interface_states"><code class="docutils literal notranslate"><span class="pre">interface_states()</span></code></a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="module-pyro.compressible">
-<span id="pyro-compressible-package"></span><h1>pyro.compressible package<a class="headerlink" href="#module-pyro.compressible" title="Permalink to this heading"></a></h1>
+<span id="pyro-compressible-package"></span><h1>pyro.compressible package<a class="headerlink" href="#module-pyro.compressible" title="Link to this heading">#</a></h1>
 <p>The pyro compressible hydrodynamics solver.  This implements the
 second-order (piecewise-linear), unsplit method of Colella 1990.</p>
 <section id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading">#</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="pyro.compressible.problems.html">pyro.compressible.problems package</a><ul>
@@ -186,9 +614,21 @@ second-order (piecewise-linear), unsplit method of Colella 1990.</p>
 <li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.bubble.init_data"><code class="docutils literal notranslate"><span class="pre">init_data()</span></code></a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="pyro.compressible.problems.html#module-pyro.compressible.problems.convection">pyro.compressible.problems.convection module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.convection.finalize"><code class="docutils literal notranslate"><span class="pre">finalize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.convection.init_data"><code class="docutils literal notranslate"><span class="pre">init_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.convection.source_terms"><code class="docutils literal notranslate"><span class="pre">source_terms()</span></code></a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="pyro.compressible.problems.html#module-pyro.compressible.problems.gresho">pyro.compressible.problems.gresho module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.gresho.finalize"><code class="docutils literal notranslate"><span class="pre">finalize()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.gresho.init_data"><code class="docutils literal notranslate"><span class="pre">init_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyro.compressible.problems.html#module-pyro.compressible.problems.heating">pyro.compressible.problems.heating module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.heating.finalize"><code class="docutils literal notranslate"><span class="pre">finalize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.heating.init_data"><code class="docutils literal notranslate"><span class="pre">init_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.heating.source_terms"><code class="docutils literal notranslate"><span class="pre">source_terms()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="pyro.compressible.problems.html#module-pyro.compressible.problems.hse">pyro.compressible.problems.hse module</a><ul>
@@ -204,6 +644,12 @@ second-order (piecewise-linear), unsplit method of Colella 1990.</p>
 <li class="toctree-l2"><a class="reference internal" href="pyro.compressible.problems.html#module-pyro.compressible.problems.logo">pyro.compressible.problems.logo module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.logo.finalize"><code class="docutils literal notranslate"><span class="pre">finalize()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.logo.init_data"><code class="docutils literal notranslate"><span class="pre">init_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyro.compressible.problems.html#module-pyro.compressible.problems.plume">pyro.compressible.problems.plume module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.plume.finalize"><code class="docutils literal notranslate"><span class="pre">finalize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.plume.init_data"><code class="docutils literal notranslate"><span class="pre">init_data()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.plume.source_terms"><code class="docutils literal notranslate"><span class="pre">source_terms()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="pyro.compressible.problems.html#module-pyro.compressible.problems.quad">pyro.compressible.problems.quad module</a><ul>
@@ -224,6 +670,11 @@ second-order (piecewise-linear), unsplit method of Colella 1990.</p>
 <li class="toctree-l2"><a class="reference internal" href="pyro.compressible.problems.html#module-pyro.compressible.problems.rt2">pyro.compressible.problems.rt2 module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.rt2.finalize"><code class="docutils literal notranslate"><span class="pre">finalize()</span></code></a></li>
 <li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.rt2.init_data"><code class="docutils literal notranslate"><span class="pre">init_data()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="pyro.compressible.problems.html#module-pyro.compressible.problems.rt_multimode">pyro.compressible.problems.rt_multimode module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.rt_multimode.finalize"><code class="docutils literal notranslate"><span class="pre">finalize()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.compressible.problems.html#pyro.compressible.problems.rt_multimode.init_data"><code class="docutils literal notranslate"><span class="pre">init_data()</span></code></a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="pyro.compressible.problems.html#module-pyro.compressible.problems.sedov">pyro.compressible.problems.sedov module</a><ul>
@@ -247,10 +698,10 @@ second-order (piecewise-linear), unsplit method of Colella 1990.</p>
 </div>
 </section>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading">#</a></h2>
 </section>
 <section id="module-pyro.compressible.BC">
-<span id="pyro-compressible-bc-module"></span><h2>pyro.compressible.BC module<a class="headerlink" href="#module-pyro.compressible.BC" title="Permalink to this heading"></a></h2>
+<span id="pyro-compressible-bc-module"></span><h2>pyro.compressible.BC module<a class="headerlink" href="#module-pyro.compressible.BC" title="Link to this heading">#</a></h2>
 <p>compressible-specific boundary conditions.  Here, in particular, we
 implement an HSE BC in the vertical direction.</p>
 <p>Note: the pyro BC routines operate on a single variable at a time, so
@@ -259,17 +710,17 @@ some work will necessarily be repeated.</p>
 we’ll do a special case for them</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyro.compressible.BC.inflow_post_bc">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.BC.</span></span><span class="sig-name descname"><span class="pre">inflow_post_bc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/BC.html#inflow_post_bc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.BC.inflow_post_bc" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.BC.</span></span><span class="sig-name descname"><span class="pre">inflow_post_bc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/BC.html#inflow_post_bc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.BC.inflow_post_bc" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyro.compressible.BC.inflow_pre_bc">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.BC.</span></span><span class="sig-name descname"><span class="pre">inflow_pre_bc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/BC.html#inflow_pre_bc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.BC.inflow_pre_bc" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.BC.</span></span><span class="sig-name descname"><span class="pre">inflow_pre_bc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">var</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">g</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/BC.html#inflow_pre_bc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.BC.inflow_pre_bc" title="Link to this definition">#</a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyro.compressible.BC.user">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.BC.</span></span><span class="sig-name descname"><span class="pre">user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bc_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bc_edge</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ccdata</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/BC.html#user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.BC.user" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.BC.</span></span><span class="sig-name descname"><span class="pre">user</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">bc_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">bc_edge</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">variable</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ccdata</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/BC.html#user"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.BC.user" title="Link to this definition">#</a></dt>
 <dd><p>A hydrostatic boundary.  This integrates the equation of HSE into
 the ghost cells to get the pressure and density under the assumption
 that the specific internal energy is constant.</p>
@@ -294,22 +745,25 @@ boundary.</p>
 </dd></dl>
 
 </section>
+<section id="pyro-compressible-cgf-module">
+<h2>pyro.compressible.cgf module<a class="headerlink" href="#pyro-compressible-cgf-module" title="Link to this heading">#</a></h2>
+</section>
 <section id="module-pyro.compressible.derives">
-<span id="pyro-compressible-derives-module"></span><h2>pyro.compressible.derives module<a class="headerlink" href="#module-pyro.compressible.derives" title="Permalink to this heading"></a></h2>
+<span id="pyro-compressible-derives-module"></span><h2>pyro.compressible.derives module<a class="headerlink" href="#module-pyro.compressible.derives" title="Link to this heading">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyro.compressible.derives.derive_primitives">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.derives.</span></span><span class="sig-name descname"><span class="pre">derive_primitives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">myd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">varnames</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/derives.html#derive_primitives"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.derives.derive_primitives" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.derives.</span></span><span class="sig-name descname"><span class="pre">derive_primitives</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">myd</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">varnames</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/derives.html#derive_primitives"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.derives.derive_primitives" title="Link to this definition">#</a></dt>
 <dd><p>derive desired primitive variables from conserved state</p>
 </dd></dl>
 
 </section>
 <section id="module-pyro.compressible.eos">
-<span id="pyro-compressible-eos-module"></span><h2>pyro.compressible.eos module<a class="headerlink" href="#module-pyro.compressible.eos" title="Permalink to this heading"></a></h2>
+<span id="pyro-compressible-eos-module"></span><h2>pyro.compressible.eos module<a class="headerlink" href="#module-pyro.compressible.eos" title="Link to this heading">#</a></h2>
 <p>This is a gamma-law equation of state: p = rho e (gamma - 1), where
 gamma is the constant ratio of specific heats.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyro.compressible.eos.dens">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.eos.</span></span><span class="sig-name descname"><span class="pre">dens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eint</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/eos.html#dens"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.eos.dens" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.eos.</span></span><span class="sig-name descname"><span class="pre">dens</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eint</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/eos.html#dens"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.eos.dens" title="Link to this definition">#</a></dt>
 <dd><p>Given the pressure and the specific internal energy, return
 the density</p>
 <dl class="field-list simple">
@@ -334,7 +788,7 @@ the density</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyro.compressible.eos.pres">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.eos.</span></span><span class="sig-name descname"><span class="pre">pres</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eint</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/eos.html#pres"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.eos.pres" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.eos.</span></span><span class="sig-name descname"><span class="pre">pres</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">eint</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/eos.html#pres"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.eos.pres" title="Link to this definition">#</a></dt>
 <dd><p>Given the density and the specific internal energy, return the
 pressure</p>
 <dl class="field-list simple">
@@ -359,7 +813,7 @@ pressure</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyro.compressible.eos.rhoe">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.eos.</span></span><span class="sig-name descname"><span class="pre">rhoe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/eos.html#rhoe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.eos.rhoe" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.eos.</span></span><span class="sig-name descname"><span class="pre">rhoe</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/eos.html#rhoe"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.eos.rhoe" title="Link to this definition">#</a></dt>
 <dd><p>Given the pressure, return (rho * e)</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -381,10 +835,10 @@ pressure</p>
 
 </section>
 <section id="module-pyro.compressible.interface">
-<span id="pyro-compressible-interface-module"></span><h2>pyro.compressible.interface module<a class="headerlink" href="#module-pyro.compressible.interface" title="Permalink to this heading"></a></h2>
+<span id="pyro-compressible-interface-module"></span><h2>pyro.compressible.interface module<a class="headerlink" href="#module-pyro.compressible.interface" title="Link to this heading">#</a></h2>
 <dl class="py function">
 <dt class="sig sig-object py" id="pyro.compressible.interface.artificial_viscosity">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.interface.</span></span><span class="sig-name descname"><span class="pre">artificial_viscosity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cvisc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/interface.html#artificial_viscosity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.interface.artificial_viscosity" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.interface.</span></span><span class="sig-name descname"><span class="pre">artificial_viscosity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dy</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Lx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">Ly</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">xmin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ymin</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">cvisc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">v</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/interface.html#artificial_viscosity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.interface.artificial_viscosity" title="Link to this definition">#</a></dt>
 <dd><p>Compute the artificial viscosity.  Here, we compute edge-centered
 approximations to the divergence of the velocity.  This follows
 directly Colella Woodward (1984) Eq. 4.5</p>
@@ -416,6 +870,10 @@ directly Colella Woodward (1984) Eq. 4.5</p>
 </dd>
 <dt><strong>dx, dy</strong><span class="classifier">float</span></dt><dd><p>Cell spacings</p>
 </dd>
+<dt><strong>xmin, ymin</strong><span class="classifier">float</span></dt><dd><p>Min physical x, y boundary</p>
+</dd>
+<dt><strong>Lx, Ly: ndarray</strong></dt><dd><p>Cell size in x, y direction</p>
+</dd>
 <dt><strong>cvisc</strong><span class="classifier">float</span></dt><dd><p>viscosity parameter</p>
 </dd>
 <dt><strong>u, v</strong><span class="classifier">ndarray</span></dt><dd><p>x- and y-velocities</p>
@@ -432,184 +890,8 @@ directly Colella Woodward (1984) Eq. 4.5</p>
 </dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="pyro.compressible.interface.consFlux">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.interface.</span></span><span class="sig-name descname"><span class="pre">consFlux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ixmom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iymom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iener</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">irhoX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nspec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/interface.html#consFlux"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.interface.consFlux" title="Permalink to this definition"></a></dt>
-<dd><p>Calculate the conservative flux.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>idir</strong><span class="classifier">int</span></dt><dd><p>Are we predicting to the edges in the x-direction (1) or y-direction (2)?</p>
-</dd>
-<dt><strong>gamma</strong><span class="classifier">float</span></dt><dd><p>Adiabatic index</p>
-</dd>
-<dt><strong>idens, ixmom, iymom, iener, irhoX</strong><span class="classifier">int</span></dt><dd><p>The indices of the density, x-momentum, y-momentum, internal energy density
-and species partial densities in the conserved state vector.</p>
-</dd>
-<dt><strong>nspec</strong><span class="classifier">int</span></dt><dd><p>The number of species</p>
-</dd>
-<dt><strong>U_state</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved state vector.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>out</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved flux</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyro.compressible.interface.riemann_cgf">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.interface.</span></span><span class="sig-name descname"><span class="pre">riemann_cgf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ixmom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iymom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iener</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">irhoX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nspec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_r</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/interface.html#riemann_cgf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.interface.riemann_cgf" title="Permalink to this definition"></a></dt>
-<dd><p>Solve riemann shock tube problem for a general equation of
-state using the method of Colella, Glaz, and Ferguson.  See
-Almgren et al. 2010 (the CASTRO paper) for details.</p>
-<p>The Riemann problem for the Euler’s equation produces 4 regions,
-separated by the three characteristics (u - cs, u, u + cs):</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">-</span> <span class="n">cs</span>    <span class="n">t</span>    <span class="n">u</span>      <span class="n">u</span> <span class="o">+</span> <span class="n">cs</span>
-  \       <span class="o">^</span>   <span class="o">.</span>       <span class="o">/</span>
-   \  <span class="o">*</span><span class="n">L</span>  <span class="o">|</span>   <span class="o">.</span> <span class="o">*</span><span class="n">R</span>   <span class="o">/</span>
-    \     <span class="o">|</span>  <span class="o">.</span>     <span class="o">/</span>
-     \    <span class="o">|</span>  <span class="o">.</span>    <span class="o">/</span>
- <span class="n">L</span>    \   <span class="o">|</span> <span class="o">.</span>   <span class="o">/</span>    <span class="n">R</span>
-       \  <span class="o">|</span> <span class="o">.</span>  <span class="o">/</span>
-        \ <span class="o">|.</span> <span class="o">/</span>
-         \<span class="o">|./</span>
-<span class="o">----------+----------------&gt;</span> <span class="n">x</span>
-</pre></div>
-</div>
-<p>We care about the solution on the axis.  The basic idea is to use
-estimates of the wave speeds to figure out which region we are in,
-and: use jump conditions to evaluate the state there.</p>
-<p>Only density jumps across the u characteristic.  All primitive
-variables jump across the other two.  Special attention is needed
-if a rarefaction spans the axis.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>idir</strong><span class="classifier">int</span></dt><dd><p>Are we predicting to the edges in the x-direction (1) or y-direction (2)?</p>
-</dd>
-<dt><strong>ng</strong><span class="classifier">int</span></dt><dd><p>The number of ghost cells</p>
-</dd>
-<dt><strong>nspec</strong><span class="classifier">int</span></dt><dd><p>The number of species</p>
-</dd>
-<dt><strong>idens, ixmom, iymom, iener, irhoX</strong><span class="classifier">int</span></dt><dd><p>The indices of the density, x-momentum, y-momentum, internal energy density
-and species partial densities in the conserved state vector.</p>
-</dd>
-<dt><strong>lower_solid, upper_solid</strong><span class="classifier">int</span></dt><dd><p>Are we at lower or upper solid boundaries?</p>
-</dd>
-<dt><strong>gamma</strong><span class="classifier">float</span></dt><dd><p>Adiabatic index</p>
-</dd>
-<dt><strong>U_l, U_r</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved state on the left and right cell edges.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>out</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved flux</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyro.compressible.interface.riemann_hllc">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.interface.</span></span><span class="sig-name descname"><span class="pre">riemann_hllc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ixmom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iymom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iener</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">irhoX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nspec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_r</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/interface.html#riemann_hllc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.interface.riemann_hllc" title="Permalink to this definition"></a></dt>
-<dd><p>This is the HLLC Riemann solver.  The implementation follows
-directly out of Toro’s book.  Note: this does not handle the
-transonic rarefaction.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>idir</strong><span class="classifier">int</span></dt><dd><p>Are we predicting to the edges in the x-direction (1) or y-direction (2)?</p>
-</dd>
-<dt><strong>ng</strong><span class="classifier">int</span></dt><dd><p>The number of ghost cells</p>
-</dd>
-<dt><strong>nspec</strong><span class="classifier">int</span></dt><dd><p>The number of species</p>
-</dd>
-<dt><strong>idens, ixmom, iymom, iener, irhoX</strong><span class="classifier">int</span></dt><dd><p>The indices of the density, x-momentum, y-momentum, internal energy density
-and species partial densities in the conserved state vector.</p>
-</dd>
-<dt><strong>lower_solid, upper_solid</strong><span class="classifier">int</span></dt><dd><p>Are we at lower or upper solid boundaries?</p>
-</dd>
-<dt><strong>gamma</strong><span class="classifier">float</span></dt><dd><p>Adiabatic index</p>
-</dd>
-<dt><strong>U_l, U_r</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved state on the left and right cell edges.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>out</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved flux</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="pyro.compressible.interface.riemann_prim">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.interface.</span></span><span class="sig-name descname"><span class="pre">riemann_prim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">irho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nspec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_r</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/interface.html#riemann_prim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.interface.riemann_prim" title="Permalink to this definition"></a></dt>
-<dd><p>this is like riemann_cgf, except that it works on a primitive
-variable input state and returns the primitive variable interface
-state</p>
-<p>Solve riemann shock tube problem for a general equation of
-state using the method of Colella, Glaz, and Ferguson.  See
-Almgren et al. 2010 (the CASTRO paper) for details.</p>
-<p>The Riemann problem for the Euler’s equation produces 4 regions,
-separated by the three characteristics <span class="math notranslate nohighlight">\((u - cs, u, u + cs)\)</span>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">-</span> <span class="n">cs</span>    <span class="n">t</span>    <span class="n">u</span>      <span class="n">u</span> <span class="o">+</span> <span class="n">cs</span>
-  \       <span class="o">^</span>   <span class="o">.</span>       <span class="o">/</span>
-   \  <span class="o">*</span><span class="n">L</span>  <span class="o">|</span>   <span class="o">.</span> <span class="o">*</span><span class="n">R</span>   <span class="o">/</span>
-    \     <span class="o">|</span>  <span class="o">.</span>     <span class="o">/</span>
-     \    <span class="o">|</span>  <span class="o">.</span>    <span class="o">/</span>
- <span class="n">L</span>    \   <span class="o">|</span> <span class="o">.</span>   <span class="o">/</span>    <span class="n">R</span>
-       \  <span class="o">|</span> <span class="o">.</span>  <span class="o">/</span>
-        \ <span class="o">|.</span> <span class="o">/</span>
-         \<span class="o">|./</span>
-<span class="o">----------+----------------&gt;</span> <span class="n">x</span>
-</pre></div>
-</div>
-<p>We care about the solution on the axis.  The basic idea is to use
-estimates of the wave speeds to figure out which region we are in,
-and: use jump conditions to evaluate the state there.</p>
-<p>Only density jumps across the <span class="math notranslate nohighlight">\(u\)</span> characteristic.  All primitive
-variables jump across the other two.  Special attention is needed
-if a rarefaction spans the axis.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><dl class="simple">
-<dt><strong>idir</strong><span class="classifier">int</span></dt><dd><p>Are we predicting to the edges in the x-direction (1) or y-direction (2)?</p>
-</dd>
-<dt><strong>ng</strong><span class="classifier">int</span></dt><dd><p>The number of ghost cells</p>
-</dd>
-<dt><strong>nspec</strong><span class="classifier">int</span></dt><dd><p>The number of species</p>
-</dd>
-<dt><strong>irho, iu, iv, ip, iX</strong><span class="classifier">int</span></dt><dd><p>The indices of the density, x-velocity, y-velocity, pressure and species fractions in the state vector.</p>
-</dd>
-<dt><strong>lower_solid, upper_solid</strong><span class="classifier">int</span></dt><dd><p>Are we at lower or upper solid boundaries?</p>
-</dd>
-<dt><strong>gamma</strong><span class="classifier">float</span></dt><dd><p>Adiabatic index</p>
-</dd>
-<dt><strong>q_l, q_r</strong><span class="classifier">ndarray</span></dt><dd><p>Primitive state on the left and right cell edges.</p>
-</dd>
-</dl>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><dl class="simple">
-<dt><strong>out</strong><span class="classifier">ndarray</span></dt><dd><p>Primitive flux</p>
-</dd>
-</dl>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="pyro.compressible.interface.states">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.interface.</span></span><span class="sig-name descname"><span class="pre">states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">irho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nspec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dqv</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/interface.html#states"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.interface.states" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.interface.</span></span><span class="sig-name descname"><span class="pre">states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dx</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">irho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ix</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nspec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">qv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dqv</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/interface.html#states"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.interface.states" title="Link to this definition">#</a></dt>
 <dd><p>predict the cell-centered state to the edges in one-dimension
 using the reconstructed, limited slopes.</p>
 <p>We follow the convection here that <code class="docutils literal notranslate"><span class="pre">V_l[i]</span></code> is the left state at the
@@ -664,7 +946,7 @@ computational zones:</p>
 </dd>
 <dt><strong>ng</strong><span class="classifier">int</span></dt><dd><p>The number of ghost cells</p>
 </dd>
-<dt><strong>dx</strong><span class="classifier">float</span></dt><dd><p>The cell spacing</p>
+<dt><strong>dx</strong><span class="classifier">ndarray</span></dt><dd><p>The cell spacing</p>
 </dd>
 <dt><strong>dt</strong><span class="classifier">float</span></dt><dd><p>The timestep</p>
 </dd>
@@ -691,37 +973,298 @@ state vector</p>
 </dd></dl>
 
 </section>
+<section id="pyro-compressible-prim-module">
+<h2>pyro.compressible.prim module<a class="headerlink" href="#pyro-compressible-prim-module" title="Link to this heading">#</a></h2>
+</section>
+<section id="module-pyro.compressible.riemann">
+<span id="pyro-compressible-riemann-module"></span><h2>pyro.compressible.riemann module<a class="headerlink" href="#module-pyro.compressible.riemann" title="Link to this heading">#</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="pyro.compressible.riemann.consFlux">
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.riemann.</span></span><span class="sig-name descname"><span class="pre">consFlux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">coord_type</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ixmom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iymom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iener</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">irhoX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nspec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_state</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/riemann.html#consFlux"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.riemann.consFlux" title="Link to this definition">#</a></dt>
+<dd><p>Calculate the conservative flux.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>idir</strong><span class="classifier">int</span></dt><dd><p>Are we predicting to the edges in the x-direction (1) or y-direction (2)?</p>
+</dd>
+<dt><strong>gamma</strong><span class="classifier">float</span></dt><dd><p>Adiabatic index</p>
+</dd>
+<dt><strong>idens, ixmom, iymom, iener, irhoX</strong><span class="classifier">int</span></dt><dd><p>The indices of the density, x-momentum, y-momentum, internal energy density
+and species partial densities in the conserved state vector.</p>
+</dd>
+<dt><strong>nspec</strong><span class="classifier">int</span></dt><dd><p>The number of species</p>
+</dd>
+<dt><strong>U_state</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved state vector.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved flux</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyro.compressible.riemann.estimate_wave_speed">
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.riemann.</span></span><span class="sig-name descname"><span class="pre">estimate_wave_speed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">rho_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rho_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">u_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">p_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">c_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/riemann.html#estimate_wave_speed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.riemann.estimate_wave_speed" title="Link to this definition">#</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyro.compressible.riemann.riemann_cgf">
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.riemann.</span></span><span class="sig-name descname"><span class="pre">riemann_cgf</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ixmom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iymom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iener</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">irhoX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nspec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_r</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/riemann.html#riemann_cgf"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.riemann.riemann_cgf" title="Link to this definition">#</a></dt>
+<dd><p>Solve riemann shock tube problem for a general equation of
+state using the method of Colella, Glaz, and Ferguson.  See
+Almgren et al. 2010 (the CASTRO paper) for details.</p>
+<p>The Riemann problem for the Euler’s equation produces 4 regions,
+separated by the three characteristics (u - cs, u, u + cs):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">-</span> <span class="n">cs</span>    <span class="n">t</span>    <span class="n">u</span>      <span class="n">u</span> <span class="o">+</span> <span class="n">cs</span>
+  \       <span class="o">^</span>   <span class="o">.</span>       <span class="o">/</span>
+   \  <span class="o">*</span><span class="n">L</span>  <span class="o">|</span>   <span class="o">.</span> <span class="o">*</span><span class="n">R</span>   <span class="o">/</span>
+    \     <span class="o">|</span>  <span class="o">.</span>     <span class="o">/</span>
+     \    <span class="o">|</span>  <span class="o">.</span>    <span class="o">/</span>
+ <span class="n">L</span>    \   <span class="o">|</span> <span class="o">.</span>   <span class="o">/</span>    <span class="n">R</span>
+       \  <span class="o">|</span> <span class="o">.</span>  <span class="o">/</span>
+        \ <span class="o">|.</span> <span class="o">/</span>
+         \<span class="o">|./</span>
+<span class="o">----------+----------------&gt;</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>We care about the solution on the axis.  The basic idea is to use
+estimates of the wave speeds to figure out which region we are in,
+and: use jump conditions to evaluate the state there.</p>
+<p>Only density jumps across the u characteristic.  All primitive
+variables jump across the other two.  Special attention is needed
+if a rarefaction spans the axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>idir</strong><span class="classifier">int</span></dt><dd><p>Are we predicting to the edges in the x-direction (1) or y-direction (2)?</p>
+</dd>
+<dt><strong>ng</strong><span class="classifier">int</span></dt><dd><p>The number of ghost cells</p>
+</dd>
+<dt><strong>nspec</strong><span class="classifier">int</span></dt><dd><p>The number of species</p>
+</dd>
+<dt><strong>idens, ixmom, iymom, iener, irhoX</strong><span class="classifier">int</span></dt><dd><p>The indices of the density, x-momentum, y-momentum, internal energy density
+and species partial densities in the conserved state vector.</p>
+</dd>
+<dt><strong>lower_solid, upper_solid</strong><span class="classifier">int</span></dt><dd><p>Are we at lower or upper solid boundaries?</p>
+</dd>
+<dt><strong>gamma</strong><span class="classifier">float</span></dt><dd><p>Adiabatic index</p>
+</dd>
+<dt><strong>U_l, U_r</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved state on the left and right cell edges.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved states.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyro.compressible.riemann.riemann_flux">
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.riemann.</span></span><span class="sig-name descname"><span class="pre">riemann_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_r</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">my_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ivars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">return_cons</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">False</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/riemann.html#riemann_flux"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.riemann.riemann_flux" title="Link to this definition">#</a></dt>
+<dd><p>This is the general interface that constructs the unsplit fluxes through
+the idir (1 for x, 2 for y) interfaces using the left and right
+conserved states by using the riemann solver.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>U_l, U_r: ndarray, ndarray</strong></dt><dd><p>Conserved states in the left and right interface</p>
+</dd>
+<dt><strong>my_data</strong><span class="classifier">CellCenterData2d object</span></dt><dd><p>The data object containing the grid and advective scalar that
+we are advecting.</p>
+</dd>
+<dt><strong>rp</strong><span class="classifier">RuntimeParameters object</span></dt><dd><p>The runtime parameters for the simulation</p>
+</dd>
+<dt><strong>ivars</strong><span class="classifier">Variables object</span></dt><dd><p>The Variables object that tells us which indices refer to which
+variables</p>
+</dd>
+<dt><strong>lower_solid, upper_solid</strong><span class="classifier">int</span></dt><dd><p>Are we at lower or upper solid boundaries?</p>
+</dd>
+<dt><strong>tc</strong><span class="classifier">TimerCollection object</span></dt><dd><p>The timers we are using to profile</p>
+</dd>
+<dt><strong>return_cons: Boolean</strong></dt><dd><p>If we don’t use HLLC Riemann solver, do we also return conserved states?</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>F</strong><span class="classifier">ndarray</span></dt><dd><p>Fluxes in x or y direction</p>
+</dd>
+<dt>Optionally:</dt><dd></dd>
+<dt>U: ndarray</dt><dd><p>Conserved states in x or y direction</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyro.compressible.riemann.riemann_hllc">
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.riemann.</span></span><span class="sig-name descname"><span class="pre">riemann_hllc</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ixmom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iymom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iener</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">irhoX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nspec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_r</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/riemann.html#riemann_hllc"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.riemann.riemann_hllc" title="Link to this definition">#</a></dt>
+<dd><p>This is the HLLC Riemann solver.  The implementation follows
+directly out of Toro’s book.  Note: this does not handle the
+transonic rarefaction.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>idir</strong><span class="classifier">int</span></dt><dd><p>Are we predicting to the edges in the x-direction (1) or y-direction (2)?</p>
+</dd>
+<dt><strong>ng</strong><span class="classifier">int</span></dt><dd><p>The number of ghost cells</p>
+</dd>
+<dt><strong>nspec</strong><span class="classifier">int</span></dt><dd><p>The number of species</p>
+</dd>
+<dt><strong>idens, ixmom, iymom, iener, irhoX</strong><span class="classifier">int</span></dt><dd><p>The indices of the density, x-momentum, y-momentum, internal energy density
+and species partial densities in the conserved state vector.</p>
+</dd>
+<dt><strong>lower_solid, upper_solid</strong><span class="classifier">int</span></dt><dd><p>Are we at lower or upper solid boundaries?</p>
+</dd>
+<dt><strong>gamma</strong><span class="classifier">float</span></dt><dd><p>Adiabatic index</p>
+</dd>
+<dt><strong>U_l, U_r</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved state on the left and right cell edges.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved flux</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyro.compressible.riemann.riemann_hllc_lowspeed">
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.riemann.</span></span><span class="sig-name descname"><span class="pre">riemann_hllc_lowspeed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">idens</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ixmom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iymom</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iener</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">irhoX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nspec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_r</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/riemann.html#riemann_hllc_lowspeed"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.riemann.riemann_hllc_lowspeed" title="Link to this definition">#</a></dt>
+<dd><p>This is the HLLC Riemann solver based on Toro (2009) alternate formulation
+(Eqs. 10.43 and 10.44) and the low Mach number asymptotic fix of
+Minoshima &amp; Miyoshi (2021).  It is also based on the Quokka implementation.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>idir</strong><span class="classifier">int</span></dt><dd><p>Are we predicting to the edges in the x-direction (1) or y-direction (2)?</p>
+</dd>
+<dt><strong>ng</strong><span class="classifier">int</span></dt><dd><p>The number of ghost cells</p>
+</dd>
+<dt><strong>nspec</strong><span class="classifier">int</span></dt><dd><p>The number of species</p>
+</dd>
+<dt><strong>idens, ixmom, iymom, iener, irhoX</strong><span class="classifier">int</span></dt><dd><p>The indices of the density, x-momentum, y-momentum, internal energy density
+and species partial densities in the conserved state vector.</p>
+</dd>
+<dt><strong>lower_solid, upper_solid</strong><span class="classifier">int</span></dt><dd><p>Are we at lower or upper solid boundaries?</p>
+</dd>
+<dt><strong>gamma</strong><span class="classifier">float</span></dt><dd><p>Adiabatic index</p>
+</dd>
+<dt><strong>U_l, U_r</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved state on the left and right cell edges.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">ndarray</span></dt><dd><p>Conserved flux</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyro.compressible.riemann.riemann_prim">
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.riemann.</span></span><span class="sig-name descname"><span class="pre">riemann_prim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">idir</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ng</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">irho</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iu</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iv</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ip</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">iX</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">nspec</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">lower_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">upper_solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_l</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q_r</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/riemann.html#riemann_prim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.riemann.riemann_prim" title="Link to this definition">#</a></dt>
+<dd><p>this is like riemann_cgf, except that it works on a primitive
+variable input state and returns the primitive variable interface
+state</p>
+<p>Solve riemann shock tube problem for a general equation of
+state using the method of Colella, Glaz, and Ferguson.  See
+Almgren et al. 2010 (the CASTRO paper) for details.</p>
+<p>The Riemann problem for the Euler’s equation produces 4 regions,
+separated by the three characteristics <span class="math notranslate nohighlight">\((u - cs, u, u + cs)\)</span>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">u</span> <span class="o">-</span> <span class="n">cs</span>    <span class="n">t</span>    <span class="n">u</span>      <span class="n">u</span> <span class="o">+</span> <span class="n">cs</span>
+  \       <span class="o">^</span>   <span class="o">.</span>       <span class="o">/</span>
+   \  <span class="o">*</span><span class="n">L</span>  <span class="o">|</span>   <span class="o">.</span> <span class="o">*</span><span class="n">R</span>   <span class="o">/</span>
+    \     <span class="o">|</span>  <span class="o">.</span>     <span class="o">/</span>
+     \    <span class="o">|</span>  <span class="o">.</span>    <span class="o">/</span>
+ <span class="n">L</span>    \   <span class="o">|</span> <span class="o">.</span>   <span class="o">/</span>    <span class="n">R</span>
+       \  <span class="o">|</span> <span class="o">.</span>  <span class="o">/</span>
+        \ <span class="o">|.</span> <span class="o">/</span>
+         \<span class="o">|./</span>
+<span class="o">----------+----------------&gt;</span> <span class="n">x</span>
+</pre></div>
+</div>
+<p>We care about the solution on the axis.  The basic idea is to use
+estimates of the wave speeds to figure out which region we are in,
+and: use jump conditions to evaluate the state there.</p>
+<p>Only density jumps across the <span class="math notranslate nohighlight">\(u\)</span> characteristic.  All primitive
+variables jump across the other two.  Special attention is needed
+if a rarefaction spans the axis.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>idir</strong><span class="classifier">int</span></dt><dd><p>Are we predicting to the edges in the x-direction (1) or y-direction (2)?</p>
+</dd>
+<dt><strong>ng</strong><span class="classifier">int</span></dt><dd><p>The number of ghost cells</p>
+</dd>
+<dt><strong>nspec</strong><span class="classifier">int</span></dt><dd><p>The number of species</p>
+</dd>
+<dt><strong>irho, iu, iv, ip, iX</strong><span class="classifier">int</span></dt><dd><p>The indices of the density, x-velocity, y-velocity, pressure and species fractions in the state vector.</p>
+</dd>
+<dt><strong>lower_solid, upper_solid</strong><span class="classifier">int</span></dt><dd><p>Are we at lower or upper solid boundaries?</p>
+</dd>
+<dt><strong>gamma</strong><span class="classifier">float</span></dt><dd><p>Adiabatic index</p>
+</dd>
+<dt><strong>q_l, q_r</strong><span class="classifier">ndarray</span></dt><dd><p>Primitive state on the left and right cell edges.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">ndarray</span></dt><dd><p>Primitive flux</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
 <section id="module-pyro.compressible.simulation">
-<span id="pyro-compressible-simulation-module"></span><h2>pyro.compressible.simulation module<a class="headerlink" href="#module-pyro.compressible.simulation" title="Permalink to this heading"></a></h2>
+<span id="pyro-compressible-simulation-module"></span><h2>pyro.compressible.simulation module<a class="headerlink" href="#module-pyro.compressible.simulation" title="Link to this heading">#</a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="pyro.compressible.simulation.Simulation">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyro.compressible.simulation.</span></span><span class="sig-name descname"><span class="pre">Simulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timers=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_class=&lt;class</span> <span class="pre">'pyro.mesh.patch.CellCenterData2d'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Simulation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Simulation" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyro.compressible.simulation.</span></span><span class="sig-name descname"><span class="pre">Simulation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">solver_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem_name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem_func</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem_finalize_func=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem_source_func=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">timers=None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">data_class=&lt;class</span> <span class="pre">'pyro.mesh.patch.CellCenterData2d'&gt;</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Simulation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Simulation" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <a class="reference internal" href="pyro.html#pyro.simulation_null.NullSimulation" title="pyro.simulation_null.NullSimulation"><code class="xref py py-class docutils literal notranslate"><span class="pre">NullSimulation</span></code></a></p>
 <p>The main simulation class for the corner transport upwind
 compressible hydrodynamics solver</p>
 <dl class="py method">
 <dt class="sig sig-object py" id="pyro.compressible.simulation.Simulation.dovis">
-<span class="sig-name descname"><span class="pre">dovis</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Simulation.dovis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Simulation.dovis" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">dovis</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Simulation.dovis"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Simulation.dovis" title="Link to this definition">#</a></dt>
 <dd><p>Do runtime visualization.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyro.compressible.simulation.Simulation.evolve">
-<span class="sig-name descname"><span class="pre">evolve</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Simulation.evolve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Simulation.evolve" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">evolve</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Simulation.evolve"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Simulation.evolve" title="Link to this definition">#</a></dt>
 <dd><p>Evolve the equations of compressible hydrodynamics through a
 timestep dt.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyro.compressible.simulation.Simulation.initialize">
-<span class="sig-name descname"><span class="pre">initialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">extra_vars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ng</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Simulation.initialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Simulation.initialize" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">initialize</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">extra_vars</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ng</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">4</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Simulation.initialize"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Simulation.initialize" title="Link to this definition">#</a></dt>
 <dd><p>Initialize the grid and variables for compressible flow and set
 the initial conditions for the chosen problem.</p>
 </dd></dl>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyro.compressible.simulation.Simulation.method_compute_timestep">
-<span class="sig-name descname"><span class="pre">method_compute_timestep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Simulation.method_compute_timestep"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Simulation.method_compute_timestep" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">method_compute_timestep</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Simulation.method_compute_timestep"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Simulation.method_compute_timestep" title="Link to this definition">#</a></dt>
 <dd><p>The timestep function computes the advective timestep (CFL)
 constraint.  The CFL constraint says that information cannot
 propagate further than one zone per timestep.</p>
@@ -731,7 +1274,7 @@ CFL step we actually take.</p>
 
 <dl class="py method">
 <dt class="sig sig-object py" id="pyro.compressible.simulation.Simulation.write_extras">
-<span class="sig-name descname"><span class="pre">write_extras</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Simulation.write_extras"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Simulation.write_extras" title="Permalink to this definition"></a></dt>
+<span class="sig-name descname"><span class="pre">write_extras</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">f</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Simulation.write_extras"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Simulation.write_extras" title="Link to this definition">#</a></dt>
 <dd><p>Output simulation-specific data to the h5py file f</p>
 </dd></dl>
 
@@ -739,7 +1282,7 @@ CFL step we actually take.</p>
 
 <dl class="py class">
 <dt class="sig sig-object py" id="pyro.compressible.simulation.Variables">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyro.compressible.simulation.</span></span><span class="sig-name descname"><span class="pre">Variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">myd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Variables"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Variables" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">pyro.compressible.simulation.</span></span><span class="sig-name descname"><span class="pre">Variables</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">myd</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#Variables"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.Variables" title="Link to this definition">#</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>a container class for easy access to the different compressible
 variable by an integer key</p>
@@ -747,19 +1290,32 @@ variable by an integer key</p>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="pyro.compressible.simulation.cons_to_prim">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.simulation.</span></span><span class="sig-name descname"><span class="pre">cons_to_prim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">U</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ivars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">myg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#cons_to_prim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.cons_to_prim" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.simulation.</span></span><span class="sig-name descname"><span class="pre">cons_to_prim</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">U</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ivars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">myg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#cons_to_prim"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.cons_to_prim" title="Link to this definition">#</a></dt>
 <dd><p>convert an input vector of conserved variables to primitive variables</p>
 </dd></dl>
 
 <dl class="py function">
+<dt class="sig sig-object py" id="pyro.compressible.simulation.get_external_sources">
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.simulation.</span></span><span class="sig-name descname"><span class="pre">get_external_sources</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">t</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ivars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">myg</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_old</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#get_external_sources"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.get_external_sources" title="Link to this definition">#</a></dt>
+<dd><p>compute the external sources, including gravity</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyro.compressible.simulation.get_sponge_factor">
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.simulation.</span></span><span class="sig-name descname"><span class="pre">get_sponge_factor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">U</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ivars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">myg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#get_sponge_factor"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.get_sponge_factor" title="Link to this definition">#</a></dt>
+<dd><p>compute the sponge factor, f / tau, that goes into a
+sponge damping term of the form S = - (f / tau) (rho U)</p>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="pyro.compressible.simulation.prim_to_cons">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.simulation.</span></span><span class="sig-name descname"><span class="pre">prim_to_cons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ivars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">myg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#prim_to_cons"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.prim_to_cons" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.simulation.</span></span><span class="sig-name descname"><span class="pre">prim_to_cons</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">gamma</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ivars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">myg</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/simulation.html#prim_to_cons"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.simulation.prim_to_cons" title="Link to this definition">#</a></dt>
 <dd><p>convert an input vector of primitive variables to conserved variables</p>
 </dd></dl>
 
 </section>
 <section id="module-pyro.compressible.unsplit_fluxes">
-<span id="pyro-compressible-unsplit-fluxes-module"></span><h2>pyro.compressible.unsplit_fluxes module<a class="headerlink" href="#module-pyro.compressible.unsplit_fluxes" title="Permalink to this heading"></a></h2>
+<span id="pyro-compressible-unsplit-fluxes-module"></span><h2>pyro.compressible.unsplit_fluxes module<a class="headerlink" href="#module-pyro.compressible.unsplit_fluxes" title="Link to this heading">#</a></h2>
 <p>Implementation of the Colella 2nd order unsplit Godunov scheme.  This
 is a 2-dimensional implementation only.  We assume that the grid is
 uniform, but it is relatively straightforward to relax this
@@ -772,7 +1328,7 @@ discussed in the Colella paper).</p>
 <li><p>use_flattening: set to 1 to use the multidimensional flattening at shocks</p></li>
 <li><p>delta, z0, z1: flattening parameters (we use Colella 1990 defaults)</p></li>
 </ul>
-<p>The grid indices look like:</p>
+<p>The grid indices look like</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">j</span><span class="o">+</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">--+---------+---------+---------+</span>
        <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
   <span class="n">j</span><span class="o">+</span><span class="mi">1</span> <span class="n">_</span><span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>         <span class="o">|</span>
@@ -875,14 +1431,159 @@ transverse Riemann problem.</p></li>
 </li>
 </ul>
 <dl class="py function">
-<dt class="sig sig-object py" id="pyro.compressible.unsplit_fluxes.unsplit_fluxes">
-<span class="sig-prename descclassname"><span class="pre">pyro.compressible.unsplit_fluxes.</span></span><span class="sig-name descname"><span class="pre">unsplit_fluxes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">my_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">my_aux</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ivars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/unsplit_fluxes.html#unsplit_fluxes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.unsplit_fluxes.unsplit_fluxes" title="Permalink to this definition"></a></dt>
-<dd><p>unsplitFluxes returns the fluxes through the x and y interfaces by
-doing an unsplit reconstruction of the interface values and then
-solving the Riemann problem through all the interfaces at once</p>
-<p>currently we assume a gamma-law EOS</p>
-<p>The runtime parameter grav is assumed to be the gravitational
-acceleration in the y-direction</p>
+<dt class="sig sig-object py" id="pyro.compressible.unsplit_fluxes.apply_artificial_viscosity">
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.unsplit_fluxes.</span></span><span class="sig-name descname"><span class="pre">apply_artificial_viscosity</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">F_x</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">F_y</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">q</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">my_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ivars</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/unsplit_fluxes.html#apply_artificial_viscosity"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.unsplit_fluxes.apply_artificial_viscosity" title="Link to this definition">#</a></dt>
+<dd><p>This applies artificial viscosity correction terms to the fluxes.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>F_x, F_y</strong><span class="classifier">ndarray, ndarray</span></dt><dd><p>Fluxes in x and y interface.</p>
+</dd>
+<dt><strong>q</strong><span class="classifier">ndarray</span></dt><dd><p>Primitive variables</p>
+</dd>
+<dt><strong>my_data</strong><span class="classifier">CellCenterData2d object</span></dt><dd><p>The data object containing the grid and advective scalar that
+we are advecting.</p>
+</dd>
+<dt><strong>rp</strong><span class="classifier">RuntimeParameters object</span></dt><dd><p>The runtime parameters for the simulation</p>
+</dd>
+<dt><strong>ivars</strong><span class="classifier">Variables object</span></dt><dd><p>The Variables object that tells us which indices refer to which
+variables</p>
+</dd>
+<dt><strong>dt</strong><span class="classifier">float</span></dt><dd><p>The timestep we are advancing through.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">ndarray, ndarray</span></dt><dd><p>Fluxes in x and y interface.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyro.compressible.unsplit_fluxes.apply_source_terms">
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.unsplit_fluxes.</span></span><span class="sig-name descname"><span class="pre">apply_source_terms</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">U_xl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_xr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_yl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_yr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">my_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">my_aux</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ivars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">problem_source</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/unsplit_fluxes.html#apply_source_terms"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.unsplit_fluxes.apply_source_terms" title="Link to this definition">#</a></dt>
+<dd><p>This function applies source terms including external (gravity),
+geometric terms, and pressure terms to the left and right
+interface states (normal conserved states).
+Both geometric and pressure terms arise purely from geometry.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>U_xl, U_xr, U_yl, U_yr: ndarray, ndarray, ndarray, ndarray</strong></dt><dd><p>Conserved states in the left and right x-interface
+and left and right y-interface.</p>
+</dd>
+<dt><strong>my_data</strong><span class="classifier">CellCenterData2d object</span></dt><dd><p>The data object containing the grid and advective scalar that
+we are advecting.</p>
+</dd>
+<dt><strong>my_aux</strong><span class="classifier">CellCenterData2d object</span></dt><dd><p>The data object that carries auxiliary quantities which we need
+to fill in the ghost cells.</p>
+</dd>
+<dt><strong>rp</strong><span class="classifier">RuntimeParameters object</span></dt><dd><p>The runtime parameters for the simulation</p>
+</dd>
+<dt><strong>ivars</strong><span class="classifier">Variables object</span></dt><dd><p>The Variables object that tells us which indices refer to which
+variables</p>
+</dd>
+<dt><strong>tc</strong><span class="classifier">TimerCollection object</span></dt><dd><p>The timers we are using to profile</p>
+</dd>
+<dt><strong>dt</strong><span class="classifier">float</span></dt><dd><p>The timestep we are advancing through.</p>
+</dd>
+<dt><strong>problem_source</strong><span class="classifier">function (optional)</span></dt><dd><p>A problem-specific source function to call</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">ndarray, ndarray, ndarray, ndarray</span></dt><dd><p>Left and right normal conserved states in x and y interfaces
+with source terms added.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyro.compressible.unsplit_fluxes.apply_transverse_flux">
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.unsplit_fluxes.</span></span><span class="sig-name descname"><span class="pre">apply_transverse_flux</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">U_xl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_xr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_yl</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">U_yr</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">my_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ivars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">solid</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/unsplit_fluxes.html#apply_transverse_flux"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.unsplit_fluxes.apply_transverse_flux" title="Link to this definition">#</a></dt>
+<dd><p>This function applies transverse correction terms to the
+normal conserved states after applying other source terms.</p>
+<p>We construct the state perpendicular to the interface
+by adding the central difference part to the transverse flux
+difference.</p>
+<p>The states that we represent by indices i,j are shown below
+(1,2,3,4):</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">j</span><span class="o">+</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">--+----------+----------+----------+</span>
+       <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>
+       <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>
+  <span class="n">j</span><span class="o">+</span><span class="mi">1</span> <span class="o">-+</span>          <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>
+       <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>
+       <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>    <span class="mi">1</span><span class="p">:</span> <span class="n">U_xl</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">U</span>
+<span class="n">j</span><span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">--+----------</span><span class="n">XXXXXXXXXXXX</span><span class="o">----------+</span>                      <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">L</span>
+       <span class="o">|</span>          <span class="n">X</span>          <span class="n">X</span>          <span class="o">|</span>
+       <span class="o">|</span>          <span class="n">X</span>          <span class="n">X</span>          <span class="o">|</span>
+    <span class="n">j</span> <span class="o">-+</span>        <span class="mi">1</span> <span class="n">X</span> <span class="mi">2</span>        <span class="n">X</span>          <span class="o">|</span>    <span class="mi">2</span><span class="p">:</span> <span class="n">U_xr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">U</span>
+       <span class="o">|</span>          <span class="n">X</span>          <span class="n">X</span>          <span class="o">|</span>                      <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">j</span><span class="p">,</span><span class="n">R</span>
+       <span class="o">|</span>          <span class="n">X</span>    <span class="mi">4</span>     <span class="n">X</span>          <span class="o">|</span>
+<span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="o">--+----------</span><span class="n">XXXXXXXXXXXX</span><span class="o">----------+</span>
+       <span class="o">|</span>          <span class="o">|</span>    <span class="mi">3</span>     <span class="o">|</span>          <span class="o">|</span>    <span class="mi">3</span><span class="p">:</span> <span class="n">U_yl</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">U</span>
+       <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>                      <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">L</span>
+  <span class="n">j</span><span class="o">-</span><span class="mi">1</span> <span class="o">-+</span>          <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>
+       <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>
+       <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>          <span class="o">|</span>    <span class="mi">4</span><span class="p">:</span> <span class="n">U_yr</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">U</span>
+<span class="n">j</span><span class="o">-</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span><span class="o">--+----------+----------+----------+</span>                      <span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span><span class="n">R</span>
+       <span class="o">|</span>    <span class="o">|</span>     <span class="o">|</span>    <span class="o">|</span>     <span class="o">|</span>    <span class="o">|</span>     <span class="o">|</span>
+           <span class="n">i</span><span class="o">-</span><span class="mi">1</span>         <span class="n">i</span>         <span class="n">i</span><span class="o">+</span><span class="mi">1</span>
+     <span class="n">i</span><span class="o">-</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span>      <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span>      <span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span>      <span class="n">i</span><span class="o">+</span><span class="mi">3</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+</div>
+<p>remember that the fluxes are stored on the left edge, so:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">F_x</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">F_x</span>
+                <span class="n">i</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span><span class="p">,</span> <span class="n">j</span>
+
+<span class="n">F_y</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="n">j</span><span class="p">,:]</span> <span class="o">=</span> <span class="n">F_y</span>
+                <span class="n">i</span><span class="p">,</span> <span class="n">j</span><span class="o">-</span><span class="mi">1</span><span class="o">/</span><span class="mi">2</span>
+</pre></div>
+</div>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><dl class="simple">
+<dt><strong>U_xl, U_xr, U_yl, U_yr: ndarray, ndarray, ndarray, ndarray</strong></dt><dd><p>Conserved states in the left and right x-interface
+and left and right y-interface.</p>
+</dd>
+<dt><strong>my_data</strong><span class="classifier">CellCenterData2d object</span></dt><dd><p>The data object containing the grid and advective scalar that
+we are advecting.</p>
+</dd>
+<dt><strong>rp</strong><span class="classifier">RuntimeParameters object</span></dt><dd><p>The runtime parameters for the simulation</p>
+</dd>
+<dt><strong>ivars</strong><span class="classifier">Variables object</span></dt><dd><p>The Variables object that tells us which indices refer to which
+variables</p>
+</dd>
+<dt><strong>solid: A container class</strong></dt><dd><p>This is used in Riemann solver to indicate which side has solid boundary</p>
+</dd>
+<dt><strong>tc</strong><span class="classifier">TimerCollection object</span></dt><dd><p>The timers we are using to profile</p>
+</dd>
+<dt><strong>dt</strong><span class="classifier">float</span></dt><dd><p>The timestep we are advancing through.</p>
+</dd>
+</dl>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><dl class="simple">
+<dt><strong>out</strong><span class="classifier">ndarray, ndarray, ndarray, ndarray</span></dt><dd><p>Left and right normal conserved states in x and y interfaces
+with source terms added.</p>
+</dd>
+</dl>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="pyro.compressible.unsplit_fluxes.interface_states">
+<span class="sig-prename descclassname"><span class="pre">pyro.compressible.unsplit_fluxes.</span></span><span class="sig-name descname"><span class="pre">interface_states</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">my_data</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">rp</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">ivars</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tc</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dt</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/pyro/compressible/unsplit_fluxes.html#interface_states"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#pyro.compressible.unsplit_fluxes.interface_states" title="Link to this definition">#</a></dt>
+<dd><p>interface_states returns the normal conserved states in the x and y
+interfaces. We get the normal fluxes by finding the normal primitive states,
+Then construct the corresponding conserved states.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><dl class="simple">
@@ -891,7 +1592,7 @@ we are advecting.</p>
 </dd>
 <dt><strong>rp</strong><span class="classifier">RuntimeParameters object</span></dt><dd><p>The runtime parameters for the simulation</p>
 </dd>
-<dt><strong>vars</strong><span class="classifier">Variables object</span></dt><dd><p>The Variables object that tells us which indices refer to which
+<dt><strong>ivars</strong><span class="classifier">Variables object</span></dt><dd><p>The Variables object that tells us which indices refer to which
 variables</p>
 </dd>
 <dt><strong>tc</strong><span class="classifier">TimerCollection object</span></dt><dd><p>The timers we are using to profile</p>
@@ -902,7 +1603,7 @@ variables</p>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
 <dd class="field-even"><dl class="simple">
-<dt><strong>out</strong><span class="classifier">ndarray, ndarray</span></dt><dd><p>The fluxes on the x- and y-interfaces</p>
+<dt><strong>out</strong><span class="classifier">ndarray, ndarray, ndarray, ndarray</span></dt><dd><p>Left and right normal conserved states in x and y interfaces</p>
 </dd>
 </dl>
 </dd>
@@ -913,34 +1614,161 @@ variables</p>
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="pyro.viscous_burgers.problems.html" class="btn btn-neutral float-left" title="pyro.viscous_burgers.problems package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="pyro.compressible.problems.html" class="btn btn-neutral float-right" title="pyro.compressible.problems package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2023, pyro development team.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pyro.burgers_viscous.problems.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">pyro.burgers_viscous.problems package</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="pyro.compressible.problems.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">pyro.compressible.problems package</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#subpackages">Subpackages</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#submodules">Submodules</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.BC">pyro.compressible.BC module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.BC.inflow_post_bc"><code class="docutils literal notranslate"><span class="pre">inflow_post_bc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.BC.inflow_pre_bc"><code class="docutils literal notranslate"><span class="pre">inflow_pre_bc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.BC.user"><code class="docutils literal notranslate"><span class="pre">user()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro-compressible-cgf-module">pyro.compressible.cgf module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.derives">pyro.compressible.derives module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.derives.derive_primitives"><code class="docutils literal notranslate"><span class="pre">derive_primitives()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.eos">pyro.compressible.eos module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.eos.dens"><code class="docutils literal notranslate"><span class="pre">dens()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.eos.pres"><code class="docutils literal notranslate"><span class="pre">pres()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.eos.rhoe"><code class="docutils literal notranslate"><span class="pre">rhoe()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.interface">pyro.compressible.interface module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.interface.artificial_viscosity"><code class="docutils literal notranslate"><span class="pre">artificial_viscosity()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.interface.states"><code class="docutils literal notranslate"><span class="pre">states()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro-compressible-prim-module">pyro.compressible.prim module</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.riemann">pyro.compressible.riemann module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.consFlux"><code class="docutils literal notranslate"><span class="pre">consFlux()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.estimate_wave_speed"><code class="docutils literal notranslate"><span class="pre">estimate_wave_speed()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.riemann_cgf"><code class="docutils literal notranslate"><span class="pre">riemann_cgf()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.riemann_flux"><code class="docutils literal notranslate"><span class="pre">riemann_flux()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.riemann_hllc"><code class="docutils literal notranslate"><span class="pre">riemann_hllc()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.riemann_hllc_lowspeed"><code class="docutils literal notranslate"><span class="pre">riemann_hllc_lowspeed()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.riemann.riemann_prim"><code class="docutils literal notranslate"><span class="pre">riemann_prim()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.simulation">pyro.compressible.simulation module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Simulation"><code class="docutils literal notranslate"><span class="pre">Simulation</span></code></a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Simulation.dovis"><code class="docutils literal notranslate"><span class="pre">Simulation.dovis()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Simulation.evolve"><code class="docutils literal notranslate"><span class="pre">Simulation.evolve()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Simulation.initialize"><code class="docutils literal notranslate"><span class="pre">Simulation.initialize()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Simulation.method_compute_timestep"><code class="docutils literal notranslate"><span class="pre">Simulation.method_compute_timestep()</span></code></a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Simulation.write_extras"><code class="docutils literal notranslate"><span class="pre">Simulation.write_extras()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.Variables"><code class="docutils literal notranslate"><span class="pre">Variables</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.cons_to_prim"><code class="docutils literal notranslate"><span class="pre">cons_to_prim()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.get_external_sources"><code class="docutils literal notranslate"><span class="pre">get_external_sources()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.get_sponge_factor"><code class="docutils literal notranslate"><span class="pre">get_sponge_factor()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.simulation.prim_to_cons"><code class="docutils literal notranslate"><span class="pre">prim_to_cons()</span></code></a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#module-pyro.compressible.unsplit_fluxes">pyro.compressible.unsplit_fluxes module</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.unsplit_fluxes.apply_artificial_viscosity"><code class="docutils literal notranslate"><span class="pre">apply_artificial_viscosity()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.unsplit_fluxes.apply_source_terms"><code class="docutils literal notranslate"><span class="pre">apply_source_terms()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.unsplit_fluxes.apply_transverse_flux"><code class="docutils literal notranslate"><span class="pre">apply_transverse_flux()</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro.compressible.unsplit_fluxes.interface_states"><code class="docutils literal notranslate"><span class="pre">interface_states()</span></code></a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By pyro development team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, pyro development team.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

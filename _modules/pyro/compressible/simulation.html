@@ -1,56 +1,157 @@
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>pyro.compressible.simulation &mdash; pyro 4.0.1.post53+g7b7c6baf documentation</title>
-      <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="../../../_static/theme_overrides.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="../../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+
+
+<html lang="en" data-content_root="../../../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pyro.compressible.simulation &#8212; pyro 4.0.1.post172+ga78743ee documentation</title>
   
-        <script src="../../../_static/jquery.js"></script>
-        <script src="../../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
-        <script src="../../../_static/doctools.js"></script>
-        <script src="../../../_static/sphinx_highlight.js"></script>
-        <script src="../../../_static/clipboard.min.js"></script>
-        <script src="../../../_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="../../../_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/myfile.css?v=359afcf4" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="../../../_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="../../../_static/documentation_options.js?v=ebbc836c"></script>
+    <script src="../../../_static/doctools.js?v=9bcbadda"></script>
+    <script src="../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../../../_static/copybutton.js?v=f281be69"></script>
+    <script src="../../../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = '_modules/pyro/compressible/simulation';</script>
     <link rel="index" title="Index" href="../../../genindex.html" />
-    <link rel="search" title="Search" href="../../../search.html" /> 
-</head>
+    <link rel="search" title="Search" href="../../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="4.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-          
-          
-          <a href="../../../index.html" class="icon icon-home">
-            pyro
-              <img src="../../../_static/logo.gif" class="logo" alt="Logo"/>
-          </a>
-              <div class="version">
-                4.0
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="../../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">pyro basics</span></p>
-<ul>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../../../index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../../_static/logo.gif" class="logo__image only-light" alt=""/>
+    <img src="../../../_static/logo.gif" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">pyro 4.0</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">pyro basics</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Introduction to pyro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../installation.html">Setting up pyro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../notes.html">Notes on the numerical methods</a></li>
@@ -58,88 +159,304 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../running.html">Running</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../output.html">Working with output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../problems.html">Adding a problem</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mesh</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../mesh_basics.html">Mesh overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../mesh-examples.html">Mesh examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../spherical-mesh.html">Spherical Polar Grid</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Solvers</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../advection_basics.html">Advection solvers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../burgers_basics.html">Burgers’ Equation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../compressible_basics.html">Compressible hydrodynamics solvers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../compressible_compare.html">Compressible solver comparisons</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Multigrid</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../multigrid.html">Multigrid Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multigrid_basics.html">Simple Multigrid Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multigrid-constant-coefficients.html">Constant-Coefficient Poisson Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multigrid-variable-coeff.html">Variable Coefficient Poisson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../multigrid-general-linear.html">General Linear Elliptic Equation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hydro Solvers</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../advection_basics.html">Advection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../burgers_basics.html">Burgers’ Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compressible_basics.html">Compressible hydrodynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../diffusion_basics.html">Diffusion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../incompressible_basics.html">Incompressible hydrodynamics solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../incompressible_viscous_basics.html">Incompressible viscous hydrodynamics solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../lowmach_basics.html">Low Mach number hydrodynamics solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../swe_basics.html">Shallow water solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../incompressible_basics.html">Incompressible hydrodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../lowmach_basics.html">Low Mach number hydrodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../swe_basics.html">Shallow water hydrodynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../particles_basics.html">Particles</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Utilities</span></p>
-<ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../../../compressible-rt-compare.html">Comparing the Compressible Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../adding_a_problem_jupyter.html">Defining our own problem in Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../rt_average.html">Horizontal Averages of Rayleigh-Taylor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../advection-error.html">Error Measurement of the <code class="docutils literal notranslate"><span class="pre">advection_fv4</span></code> Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../compressible-convergence.html">Convergence of the compressible solvers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Utilities</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../analysis.html">Analysis routines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../testing.html">Testing</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Community</span></p>
-<ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../help.html">Contributing and getting help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../ack.html">Acknowledgments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../ack.html#history">History</a></li>
+
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Software Reference</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../modules.html">API</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../../modules.html">API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="../../../pyro.html">pyro package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.advection.html">pyro.advection package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.advection.problems.html">pyro.advection.problems package</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Bibliography</span></p>
-<ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.advection_fv4.html">pyro.advection_fv4 package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.advection_fv4.problems.html">pyro.advection_fv4.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.advection_nonuniform.html">pyro.advection_nonuniform package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.advection_nonuniform.problems.html">pyro.advection_nonuniform.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.advection_rk.html">pyro.advection_rk package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.advection_rk.problems.html">pyro.advection_rk.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.advection_weno.html">pyro.advection_weno package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.advection_weno.problems.html">pyro.advection_weno.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.burgers.html">pyro.burgers package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.burgers.problems.html">pyro.burgers.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.burgers_viscous.html">pyro.burgers_viscous package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.burgers_viscous.problems.html">pyro.burgers_viscous.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.compressible.html">pyro.compressible package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.compressible.problems.html">pyro.compressible.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.compressible_fv4.html">pyro.compressible_fv4 package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.compressible_fv4.problems.html">pyro.compressible_fv4.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.compressible_react.html">pyro.compressible_react package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.compressible_react.problems.html">pyro.compressible_react.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.compressible_rk.html">pyro.compressible_rk package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.compressible_rk.problems.html">pyro.compressible_rk.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.compressible_sdc.html">pyro.compressible_sdc package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.compressible_sdc.problems.html">pyro.compressible_sdc.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.diffusion.html">pyro.diffusion package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.diffusion.problems.html">pyro.diffusion.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.incompressible.html">pyro.incompressible package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.incompressible.problems.html">pyro.incompressible.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.incompressible_viscous.html">pyro.incompressible_viscous package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.incompressible_viscous.problems.html">pyro.incompressible_viscous.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.lm_atm.html">pyro.lm_atm package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.lm_atm.problems.html">pyro.lm_atm.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyro.mesh.html">pyro.mesh package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.multigrid.html">pyro.multigrid package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.multigrid.examples.html">pyro.multigrid.examples package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyro.particles.html">pyro.particles package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="../../../pyro.swe.html">pyro.swe package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../pyro.swe.problems.html">pyro.swe.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../pyro.util.html">pyro.util package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliography</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../../../zreferences.html">References</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../../../index.html">pyro</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="../../index.html">Module code</a></li>
-      <li class="breadcrumb-item active">pyro.compressible.simulation</li>
-      <li class="wy-breadcrumbs-aside">
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2/issues/new?title=Issue%20on%20page%20%2F_modules/pyro/compressible/simulation.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <h1>Source code for pyro.compressible.simulation</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">importlib</span>
+<span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
 
-<span class="kn">import</span> <span class="nn">matplotlib</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-
-<span class="kn">import</span> <span class="nn">pyro.compressible.unsplit_fluxes</span> <span class="k">as</span> <span class="nn">flx</span>
-<span class="kn">import</span> <span class="nn">pyro.mesh.boundary</span> <span class="k">as</span> <span class="nn">bnd</span>
-<span class="kn">from</span> <span class="nn">pyro.compressible</span> <span class="kn">import</span> <span class="n">BC</span><span class="p">,</span> <span class="n">derives</span><span class="p">,</span> <span class="n">eos</span>
-<span class="kn">from</span> <span class="nn">pyro.particles</span> <span class="kn">import</span> <span class="n">particles</span>
-<span class="kn">from</span> <span class="nn">pyro.simulation_null</span> <span class="kn">import</span> <span class="n">NullSimulation</span><span class="p">,</span> <span class="n">bc_setup</span><span class="p">,</span> <span class="n">grid_setup</span>
-<span class="kn">from</span> <span class="nn">pyro.util</span> <span class="kn">import</span> <span class="n">plot_tools</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyro.compressible.unsplit_fluxes</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">flx</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyro.mesh.boundary</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">bnd</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyro.compressible</span><span class="w"> </span><span class="kn">import</span> <span class="n">BC</span><span class="p">,</span> <span class="n">derives</span><span class="p">,</span> <span class="n">eos</span><span class="p">,</span> <span class="n">riemann</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyro.particles</span><span class="w"> </span><span class="kn">import</span> <span class="n">particles</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyro.simulation_null</span><span class="w"> </span><span class="kn">import</span> <span class="n">NullSimulation</span><span class="p">,</span> <span class="n">bc_setup</span><span class="p">,</span> <span class="n">grid_setup</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">pyro.util</span><span class="w"> </span><span class="kn">import</span> <span class="n">msg</span><span class="p">,</span> <span class="n">plot_tools</span>
 
 
-<div class="viewcode-block" id="Variables"><a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Variables">[docs]</a><span class="k">class</span> <span class="nc">Variables</span><span class="p">:</span>
+<div class="viewcode-block" id="Variables">
+<a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Variables">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Variables</span><span class="p">:</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    a container class for easy access to the different compressible</span>
 <span class="sd">    variable by an integer key</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">myd</span><span class="p">):</span>
+    <span class="k">def</span><span class="w"> </span><span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">myd</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">nvar</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">myd</span><span class="o">.</span><span class="n">names</span><span class="p">)</span>
 
         <span class="c1"># conserved variables -- we set these when we initialize for</span>
@@ -171,18 +488,30 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">ix</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span></div>
 
 
-<div class="viewcode-block" id="cons_to_prim"><a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.cons_to_prim">[docs]</a><span class="k">def</span> <span class="nf">cons_to_prim</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">ivars</span><span class="p">,</span> <span class="n">myg</span><span class="p">):</span>
+
+<div class="viewcode-block" id="cons_to_prim">
+<a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.cons_to_prim">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">cons_to_prim</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">ivars</span><span class="p">,</span> <span class="n">myg</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; convert an input vector of conserved variables to primitive variables &quot;&quot;&quot;</span>
 
     <span class="n">q</span> <span class="o">=</span> <span class="n">myg</span><span class="o">.</span><span class="n">scratch_array</span><span class="p">(</span><span class="n">nvar</span><span class="o">=</span><span class="n">ivars</span><span class="o">.</span><span class="n">nq</span><span class="p">)</span>
 
     <span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">irho</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span>
-    <span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iu</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">]</span><span class="o">/</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span>
-    <span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iv</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span><span class="o">/</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span>
+    <span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iu</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">],</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">],</span>
+                                  <span class="n">out</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">]),</span>
+                                  <span class="n">where</span><span class="o">=</span><span class="p">(</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">))</span>
+    <span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iv</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">],</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">],</span>
+                                  <span class="n">out</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]),</span>
+                                  <span class="n">where</span><span class="o">=</span><span class="p">(</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">))</span>
 
-    <span class="n">e</span> <span class="o">=</span> <span class="p">(</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iener</span><span class="p">]</span> <span class="o">-</span>
-         <span class="mf">0.5</span><span class="o">*</span><span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">irho</span><span class="p">]</span><span class="o">*</span><span class="p">(</span><span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iu</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span>
-                                  <span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iv</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">))</span><span class="o">/</span><span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">irho</span><span class="p">]</span>
+    <span class="n">e</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">divide</span><span class="p">(</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iener</span><span class="p">]</span> <span class="o">-</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">irho</span><span class="p">]</span> <span class="o">*</span>
+                  <span class="p">(</span><span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iu</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iv</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span><span class="p">),</span>
+                  <span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">irho</span><span class="p">],</span>
+                  <span class="n">out</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros_like</span><span class="p">(</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iener</span><span class="p">]),</span>
+                  <span class="n">where</span><span class="o">=</span><span class="p">(</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span> <span class="o">!=</span> <span class="mf">0.0</span><span class="p">))</span>
+
+    <span class="k">assert</span> <span class="n">e</span><span class="o">.</span><span class="n">v</span><span class="p">()</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">0.0</span>
+    <span class="k">assert</span> <span class="n">q</span><span class="o">.</span><span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">ivars</span><span class="o">.</span><span class="n">irho</span><span class="p">)</span><span class="o">.</span><span class="n">min</span><span class="p">()</span> <span class="o">&gt;</span> <span class="mf">0.0</span>
 
     <span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">ip</span><span class="p">]</span> <span class="o">=</span> <span class="n">eos</span><span class="o">.</span><span class="n">pres</span><span class="p">(</span><span class="n">gamma</span><span class="p">,</span> <span class="n">q</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">irho</span><span class="p">],</span> <span class="n">e</span><span class="p">)</span>
 
@@ -194,7 +523,10 @@
     <span class="k">return</span> <span class="n">q</span></div>
 
 
-<div class="viewcode-block" id="prim_to_cons"><a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.prim_to_cons">[docs]</a><span class="k">def</span> <span class="nf">prim_to_cons</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">ivars</span><span class="p">,</span> <span class="n">myg</span><span class="p">):</span>
+
+<div class="viewcode-block" id="prim_to_cons">
+<a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.prim_to_cons">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">prim_to_cons</span><span class="p">(</span><span class="n">q</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="n">ivars</span><span class="p">,</span> <span class="n">myg</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot; convert an input vector of primitive variables to conserved variables &quot;&quot;&quot;</span>
 
     <span class="n">U</span> <span class="o">=</span> <span class="n">myg</span><span class="o">.</span><span class="n">scratch_array</span><span class="p">(</span><span class="n">nvar</span><span class="o">=</span><span class="n">ivars</span><span class="o">.</span><span class="n">nvar</span><span class="p">)</span>
@@ -216,13 +548,106 @@
     <span class="k">return</span> <span class="n">U</span></div>
 
 
-<div class="viewcode-block" id="Simulation"><a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Simulation">[docs]</a><span class="k">class</span> <span class="nc">Simulation</span><span class="p">(</span><span class="n">NullSimulation</span><span class="p">):</span>
+
+<div class="viewcode-block" id="get_external_sources">
+<a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.get_external_sources">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_external_sources</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="n">dt</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">ivars</span><span class="p">,</span> <span class="n">rp</span><span class="p">,</span> <span class="n">myg</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">U_old</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">problem_source</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;compute the external sources, including gravity&quot;&quot;&quot;</span>
+
+    <span class="n">_</span> <span class="o">=</span> <span class="n">t</span>  <span class="c1"># maybe unused</span>
+
+    <span class="n">S</span> <span class="o">=</span> <span class="n">myg</span><span class="o">.</span><span class="n">scratch_array</span><span class="p">(</span><span class="n">nvar</span><span class="o">=</span><span class="n">ivars</span><span class="o">.</span><span class="n">nvar</span><span class="p">)</span>
+
+    <span class="n">grav</span> <span class="o">=</span> <span class="n">rp</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;compressible.grav&quot;</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">U_old</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="c1"># we are just computing the sources from the current state U</span>
+
+        <span class="k">if</span> <span class="n">myg</span><span class="o">.</span><span class="n">coord_type</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># gravity points in the radial direction for spherical</span>
+            <span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span> <span class="o">*</span> <span class="n">grav</span>
+            <span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iener</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">]</span> <span class="o">*</span> <span class="n">grav</span>
+
+            <span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">]</span> <span class="o">+=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span> <span class="o">*</span> <span class="n">myg</span><span class="o">.</span><span class="n">x2d</span><span class="p">)</span>
+            <span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span> <span class="o">+=</span> <span class="o">-</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">]</span> <span class="o">*</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span> <span class="o">/</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># gravity points in the vertical (y) direction for Cartesian</span>
+            <span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span> <span class="o">*</span> <span class="n">grav</span>
+            <span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iener</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span> <span class="o">*</span> <span class="n">grav</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="c1"># we want to compute gravity using the time-updated momentum</span>
+        <span class="c1"># we assume that U is an approximation to U^{n+1}, which includes</span>
+        <span class="c1"># a full dt * S_old</span>
+
+        <span class="k">if</span> <span class="n">myg</span><span class="o">.</span><span class="n">coord_type</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span> <span class="o">*</span> <span class="n">grav</span>
+            <span class="n">S_old_xmom</span> <span class="o">=</span> <span class="n">U_old</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span> <span class="o">*</span> <span class="n">grav</span>
+
+            <span class="c1"># we want the corrected xmom that has a time-centered source</span>
+            <span class="n">xmom_new</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">*</span> <span class="p">(</span><span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">]</span> <span class="o">-</span> <span class="n">S_old_xmom</span><span class="p">)</span>
+
+            <span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iener</span><span class="p">]</span> <span class="o">=</span> <span class="n">xmom_new</span> <span class="o">*</span> <span class="n">grav</span>
+
+            <span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">]</span> <span class="o">+=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span><span class="o">**</span><span class="mi">2</span> <span class="o">/</span> <span class="p">(</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span> <span class="o">*</span> <span class="n">myg</span><span class="o">.</span><span class="n">x2d</span><span class="p">)</span>
+            <span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span> <span class="o">+=</span> <span class="o">-</span><span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">]</span> <span class="o">*</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span> <span class="o">/</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span> <span class="o">*</span> <span class="n">grav</span>
+            <span class="n">S_old_ymom</span> <span class="o">=</span> <span class="n">U_old</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span> <span class="o">*</span> <span class="n">grav</span>
+
+            <span class="c1"># we want the corrected ymom that has a time-centered source</span>
+            <span class="n">ymom_new</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span> <span class="o">+</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="n">dt</span> <span class="o">*</span> <span class="p">(</span><span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span> <span class="o">-</span> <span class="n">S_old_ymom</span><span class="p">)</span>
+
+            <span class="n">S</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">iener</span><span class="p">]</span> <span class="o">=</span> <span class="n">ymom_new</span> <span class="o">*</span> <span class="n">grav</span>
+
+    <span class="c1"># now add the heating</span>
+    <span class="k">if</span> <span class="n">problem_source</span><span class="p">:</span>
+        <span class="n">S_heating</span> <span class="o">=</span> <span class="n">problem_source</span><span class="p">(</span><span class="n">myg</span><span class="p">,</span> <span class="n">U</span><span class="p">,</span> <span class="n">ivars</span><span class="p">,</span> <span class="n">rp</span><span class="p">)</span>
+        <span class="n">S</span><span class="p">[</span><span class="o">...</span><span class="p">]</span> <span class="o">+=</span> <span class="n">S_heating</span>
+
+    <span class="k">return</span> <span class="n">S</span></div>
+
+
+
+<div class="viewcode-block" id="get_sponge_factor">
+<a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.get_sponge_factor">[docs]</a>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_sponge_factor</span><span class="p">(</span><span class="n">U</span><span class="p">,</span> <span class="n">ivars</span><span class="p">,</span> <span class="n">rp</span><span class="p">,</span> <span class="n">myg</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;compute the sponge factor, f / tau, that goes into a</span>
+<span class="sd">    sponge damping term of the form S = - (f / tau) (rho U)&quot;&quot;&quot;</span>
+
+    <span class="n">rho</span> <span class="o">=</span> <span class="n">U</span><span class="p">[:,</span> <span class="p">:,</span> <span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span>
+    <span class="n">rho_begin</span> <span class="o">=</span> <span class="n">rp</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;sponge.sponge_rho_begin&quot;</span><span class="p">)</span>
+    <span class="n">rho_full</span> <span class="o">=</span> <span class="n">rp</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;sponge.sponge_rho_full&quot;</span><span class="p">)</span>
+
+    <span class="k">assert</span> <span class="n">rho_begin</span> <span class="o">&gt;</span> <span class="n">rho_full</span>
+
+    <span class="n">f</span> <span class="o">=</span> <span class="n">myg</span><span class="o">.</span><span class="n">scratch_array</span><span class="p">()</span>
+
+    <span class="n">f</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">rho</span> <span class="o">&gt;</span> <span class="n">rho_begin</span><span class="p">,</span>
+                       <span class="mf">0.0</span><span class="p">,</span>
+                       <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">rho</span> <span class="o">&lt;</span> <span class="n">rho_full</span><span class="p">,</span>
+                                <span class="mf">1.0</span><span class="p">,</span>
+                                <span class="mf">0.5</span> <span class="o">*</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span> <span class="o">*</span> <span class="p">(</span><span class="n">rho</span> <span class="o">-</span> <span class="n">rho_begin</span><span class="p">)</span> <span class="o">/</span>
+                                                    <span class="p">(</span><span class="n">rho_full</span> <span class="o">-</span> <span class="n">rho_begin</span><span class="p">)))))</span>
+
+    <span class="n">tau</span> <span class="o">=</span> <span class="n">rp</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;sponge.sponge_timescale&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">f</span> <span class="o">/</span> <span class="n">tau</span></div>
+
+
+
+<div class="viewcode-block" id="Simulation">
+<a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Simulation">[docs]</a>
+<span class="k">class</span><span class="w"> </span><span class="nc">Simulation</span><span class="p">(</span><span class="n">NullSimulation</span><span class="p">):</span>
 <span class="w">    </span><span class="sd">&quot;&quot;&quot;The main simulation class for the corner transport upwind</span>
 <span class="sd">    compressible hydrodynamics solver</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="Simulation.initialize"><a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Simulation.initialize">[docs]</a>    <span class="k">def</span> <span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">extra_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ng</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
+<div class="viewcode-block" id="Simulation.initialize">
+<a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Simulation.initialize">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">initialize</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="o">*</span><span class="p">,</span> <span class="n">extra_vars</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ng</span><span class="o">=</span><span class="mi">4</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Initialize the grid and variables for compressible flow and set</span>
 <span class="sd">        the initial conditions for the chosen problem.</span>
@@ -230,8 +655,19 @@
         <span class="n">my_grid</span> <span class="o">=</span> <span class="n">grid_setup</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">,</span> <span class="n">ng</span><span class="o">=</span><span class="n">ng</span><span class="p">)</span>
         <span class="n">my_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_class</span><span class="p">(</span><span class="n">my_grid</span><span class="p">)</span>
 
+        <span class="c1"># Make sure we use CGF for riemann solver when we do SphericalPolar</span>
+        <span class="k">try</span><span class="p">:</span>
+            <span class="n">riemann_method</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;compressible.riemann&quot;</span><span class="p">)</span>
+        <span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+            <span class="n">msg</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="s2">&quot;ERROR: Riemann Solver is not set.&quot;</span><span class="p">)</span>
+
+        <span class="k">if</span> <span class="n">my_grid</span><span class="o">.</span><span class="n">coord_type</span> <span class="o">==</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">riemann_method</span> <span class="o">==</span> <span class="s2">&quot;HLLC&quot;</span><span class="p">:</span>
+            <span class="n">msg</span><span class="o">.</span><span class="n">fail</span><span class="p">(</span><span class="s2">&quot;ERROR: HLLC Riemann Solver is not supported &quot;</span> <span class="o">+</span>
+                     <span class="s2">&quot;with SphericalPolar Geometry&quot;</span><span class="p">)</span>
+
         <span class="c1"># define solver specific boundary condition routines</span>
         <span class="n">bnd</span><span class="o">.</span><span class="n">define_bc</span><span class="p">(</span><span class="s2">&quot;hse&quot;</span><span class="p">,</span> <span class="n">BC</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="n">is_solid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">bnd</span><span class="o">.</span><span class="n">define_bc</span><span class="p">(</span><span class="s2">&quot;ambient&quot;</span><span class="p">,</span> <span class="n">BC</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="n">is_solid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
         <span class="n">bnd</span><span class="o">.</span><span class="n">define_bc</span><span class="p">(</span><span class="s2">&quot;ramp&quot;</span><span class="p">,</span> <span class="n">BC</span><span class="o">.</span><span class="n">user</span><span class="p">,</span> <span class="n">is_solid</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>  <span class="c1"># for double mach reflection problem</span>
 
         <span class="n">bc</span><span class="p">,</span> <span class="n">bc_xodd</span><span class="p">,</span> <span class="n">bc_yodd</span> <span class="o">=</span> <span class="n">bc_setup</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">)</span>
@@ -267,6 +703,8 @@
         <span class="c1"># some auxiliary data that we&#39;ll need to fill GC in, but isn&#39;t</span>
         <span class="c1"># really part of the main solution</span>
         <span class="n">aux_data</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">data_class</span><span class="p">(</span><span class="n">my_grid</span><span class="p">)</span>
+        <span class="n">aux_data</span><span class="o">.</span><span class="n">register_var</span><span class="p">(</span><span class="s2">&quot;dens_src&quot;</span><span class="p">,</span> <span class="n">bc</span><span class="p">)</span>
+        <span class="n">aux_data</span><span class="o">.</span><span class="n">register_var</span><span class="p">(</span><span class="s2">&quot;xmom_src&quot;</span><span class="p">,</span> <span class="n">bc_xodd</span><span class="p">)</span>
         <span class="n">aux_data</span><span class="o">.</span><span class="n">register_var</span><span class="p">(</span><span class="s2">&quot;ymom_src&quot;</span><span class="p">,</span> <span class="n">bc_yodd</span><span class="p">)</span>
         <span class="n">aux_data</span><span class="o">.</span><span class="n">register_var</span><span class="p">(</span><span class="s2">&quot;E_src&quot;</span><span class="p">,</span> <span class="n">bc</span><span class="p">)</span>
         <span class="n">aux_data</span><span class="o">.</span><span class="n">create</span><span class="p">()</span>
@@ -278,13 +716,15 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">add_derived</span><span class="p">(</span><span class="n">derives</span><span class="o">.</span><span class="n">derive_primitives</span><span class="p">)</span>
 
         <span class="c1"># initial conditions for the problem</span>
-        <span class="n">problem</span> <span class="o">=</span> <span class="n">importlib</span><span class="o">.</span><span class="n">import_module</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;pyro.</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">solver_name</span><span class="si">}</span><span class="s2">.problems.</span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">problem_name</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
-        <span class="n">problem</span><span class="o">.</span><span class="n">init_data</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">problem_func</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">verbose</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
             <span class="nb">print</span><span class="p">(</span><span class="n">my_data</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="Simulation.method_compute_timestep"><a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Simulation.method_compute_timestep">[docs]</a>    <span class="k">def</span> <span class="nf">method_compute_timestep</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Simulation.method_compute_timestep">
+<a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Simulation.method_compute_timestep">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">method_compute_timestep</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        The timestep function computes the advective timestep (CFL)</span>
 <span class="sd">        constraint.  The CFL constraint says that information cannot</span>
@@ -299,13 +739,18 @@
         <span class="c1"># get the variables we need</span>
         <span class="n">u</span><span class="p">,</span> <span class="n">v</span><span class="p">,</span> <span class="n">cs</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">get_var</span><span class="p">([</span><span class="s2">&quot;velocity&quot;</span><span class="p">,</span> <span class="s2">&quot;soundspeed&quot;</span><span class="p">])</span>
 
+        <span class="n">grid</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">grid</span>
+
         <span class="c1"># the timestep is min(dx/(|u| + cs), dy/(|v| + cs))</span>
-        <span class="n">xtmp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">dx</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">+</span> <span class="n">cs</span><span class="p">)</span>
-        <span class="n">ytmp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">grid</span><span class="o">.</span><span class="n">dy</span><span class="o">/</span><span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">+</span> <span class="n">cs</span><span class="p">)</span>
+        <span class="n">xtmp</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">Lx</span> <span class="o">/</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">u</span><span class="p">)</span> <span class="o">+</span> <span class="n">cs</span><span class="p">)</span>
+        <span class="n">ytmp</span> <span class="o">=</span> <span class="n">grid</span><span class="o">.</span><span class="n">Ly</span> <span class="o">/</span> <span class="p">(</span><span class="nb">abs</span><span class="p">(</span><span class="n">v</span><span class="p">)</span> <span class="o">+</span> <span class="n">cs</span><span class="p">)</span>
 
         <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">=</span> <span class="n">cfl</span><span class="o">*</span><span class="nb">float</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">xtmp</span><span class="o">.</span><span class="n">min</span><span class="p">(),</span> <span class="n">ytmp</span><span class="o">.</span><span class="n">min</span><span class="p">()))</span></div>
 
-<div class="viewcode-block" id="Simulation.evolve"><a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Simulation.evolve">[docs]</a>    <span class="k">def</span> <span class="nf">evolve</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Simulation.evolve">
+<a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Simulation.evolve">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">evolve</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Evolve the equations of compressible hydrodynamics through a</span>
 <span class="sd">        timestep dt.</span>
@@ -315,33 +760,136 @@
         <span class="n">tm_evolve</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
 
         <span class="n">dens</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">get_var</span><span class="p">(</span><span class="s2">&quot;density&quot;</span><span class="p">)</span>
+        <span class="n">xmom</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">get_var</span><span class="p">(</span><span class="s2">&quot;x-momentum&quot;</span><span class="p">)</span>
         <span class="n">ymom</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">get_var</span><span class="p">(</span><span class="s2">&quot;y-momentum&quot;</span><span class="p">)</span>
         <span class="n">ener</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">get_var</span><span class="p">(</span><span class="s2">&quot;energy&quot;</span><span class="p">)</span>
 
-        <span class="n">grav</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;compressible.grav&quot;</span><span class="p">)</span>
+        <span class="n">gamma</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;eos.gamma&quot;</span><span class="p">)</span>
 
         <span class="n">myg</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">grid</span>
 
-        <span class="n">Flux_x</span><span class="p">,</span> <span class="n">Flux_y</span> <span class="o">=</span> <span class="n">flx</span><span class="o">.</span><span class="n">unsplit_fluxes</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">aux_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">,</span>
-                                            <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">solid</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="p">)</span>
+        <span class="c1"># First get conserved states normal to the x and y interface</span>
+        <span class="n">U_xl</span><span class="p">,</span> <span class="n">U_xr</span><span class="p">,</span> <span class="n">U_yl</span><span class="p">,</span> <span class="n">U_yr</span> <span class="o">=</span> <span class="n">flx</span><span class="o">.</span><span class="n">interface_states</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">,</span>
+                                                      <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="p">)</span>
 
-        <span class="n">old_dens</span> <span class="o">=</span> <span class="n">dens</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
-        <span class="n">old_ymom</span> <span class="o">=</span> <span class="n">ymom</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+        <span class="c1"># Apply source terms to them.</span>
+        <span class="c1"># This includes external (gravity), geometric and pressure terms for SphericalPolar</span>
+        <span class="c1"># Only gravitional source for Cartesian2d</span>
+        <span class="n">U_xl</span><span class="p">,</span> <span class="n">U_xr</span><span class="p">,</span> <span class="n">U_yl</span><span class="p">,</span> <span class="n">U_yr</span> <span class="o">=</span> <span class="n">flx</span><span class="o">.</span><span class="n">apply_source_terms</span><span class="p">(</span><span class="n">U_xl</span><span class="p">,</span> <span class="n">U_xr</span><span class="p">,</span> <span class="n">U_yl</span><span class="p">,</span> <span class="n">U_yr</span><span class="p">,</span>
+                                                        <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">aux_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">,</span>
+                                                        <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="p">,</span>
+                                                        <span class="n">problem_source</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">problem_source</span><span class="p">)</span>
 
-        <span class="c1"># conservative update</span>
-        <span class="n">dtdx</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">/</span><span class="n">myg</span><span class="o">.</span><span class="n">dx</span>
-        <span class="n">dtdy</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">/</span><span class="n">myg</span><span class="o">.</span><span class="n">dy</span>
+        <span class="c1"># Apply transverse corrections.</span>
+        <span class="n">U_xl</span><span class="p">,</span> <span class="n">U_xr</span><span class="p">,</span> <span class="n">U_yl</span><span class="p">,</span> <span class="n">U_yr</span> <span class="o">=</span> <span class="n">flx</span><span class="o">.</span><span class="n">apply_transverse_flux</span><span class="p">(</span><span class="n">U_xl</span><span class="p">,</span> <span class="n">U_xr</span><span class="p">,</span> <span class="n">U_yl</span><span class="p">,</span> <span class="n">U_yr</span><span class="p">,</span>
+                                                           <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span>
+                                                           <span class="bp">self</span><span class="o">.</span><span class="n">solid</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tc</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="p">)</span>
+
+        <span class="c1"># Get the actual interface conserved state after using Riemann Solver</span>
+        <span class="c1"># Then construct the corresponding fluxes using the conserved states</span>
+
+        <span class="k">if</span> <span class="n">myg</span><span class="o">.</span><span class="n">coord_type</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="c1"># We need pressure from interface state for conservative update for</span>
+            <span class="c1"># SphericalPolar geometry. So we need interface conserved states.</span>
+            <span class="n">F_x</span><span class="p">,</span> <span class="n">U_x</span> <span class="o">=</span> <span class="n">riemann</span><span class="o">.</span><span class="n">riemann_flux</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">U_xl</span><span class="p">,</span> <span class="n">U_xr</span><span class="p">,</span>
+                                            <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span>
+                                            <span class="bp">self</span><span class="o">.</span><span class="n">solid</span><span class="o">.</span><span class="n">xl</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">solid</span><span class="o">.</span><span class="n">xr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tc</span><span class="p">,</span>
+                                            <span class="n">return_cons</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="n">F_y</span><span class="p">,</span> <span class="n">U_y</span> <span class="o">=</span> <span class="n">riemann</span><span class="o">.</span><span class="n">riemann_flux</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">U_yl</span><span class="p">,</span> <span class="n">U_yr</span><span class="p">,</span>
+                                            <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span>
+                                            <span class="bp">self</span><span class="o">.</span><span class="n">solid</span><span class="o">.</span><span class="n">yl</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">solid</span><span class="o">.</span><span class="n">yr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tc</span><span class="p">,</span>
+                                            <span class="n">return_cons</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="c1"># Find primitive variable since we need pressure in conservative update.</span>
+            <span class="n">qx</span> <span class="o">=</span> <span class="n">cons_to_prim</span><span class="p">(</span><span class="n">U_x</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span> <span class="n">myg</span><span class="p">)</span>
+            <span class="n">qy</span> <span class="o">=</span> <span class="n">cons_to_prim</span><span class="p">(</span><span class="n">U_y</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span> <span class="n">myg</span><span class="p">)</span>
+
+        <span class="k">else</span><span class="p">:</span>
+            <span class="c1"># Directly calculate the interface flux using Riemann Solver</span>
+            <span class="n">F_x</span> <span class="o">=</span> <span class="n">riemann</span><span class="o">.</span><span class="n">riemann_flux</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">U_xl</span><span class="p">,</span> <span class="n">U_xr</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">solid</span><span class="o">.</span><span class="n">xl</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">solid</span><span class="o">.</span><span class="n">xr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tc</span><span class="p">,</span>
+                                       <span class="n">return_cons</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+            <span class="n">F_y</span> <span class="o">=</span> <span class="n">riemann</span><span class="o">.</span><span class="n">riemann_flux</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">U_yl</span><span class="p">,</span> <span class="n">U_yr</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span>
+                                       <span class="bp">self</span><span class="o">.</span><span class="n">solid</span><span class="o">.</span><span class="n">yl</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">solid</span><span class="o">.</span><span class="n">yr</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">tc</span><span class="p">,</span>
+                                       <span class="n">return_cons</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+        <span class="c1"># Apply artificial viscosity to fluxes</span>
+
+        <span class="n">q</span> <span class="o">=</span> <span class="n">cons_to_prim</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="n">gamma</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span> <span class="n">myg</span><span class="p">)</span>
+
+        <span class="n">F_x</span><span class="p">,</span> <span class="n">F_y</span> <span class="o">=</span> <span class="n">flx</span><span class="o">.</span><span class="n">apply_artificial_viscosity</span><span class="p">(</span><span class="n">F_x</span><span class="p">,</span> <span class="n">F_y</span><span class="p">,</span> <span class="n">q</span><span class="p">,</span>
+                                                  <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">,</span>
+                                                  <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">)</span>
+
+        <span class="c1"># save the old state (without ghost cells)</span>
+        <span class="n">U_old</span> <span class="o">=</span> <span class="n">myg</span><span class="o">.</span><span class="n">scratch_array</span><span class="p">(</span><span class="n">nvar</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">nvar</span><span class="p">)</span>
+        <span class="n">U_old</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">idens</span><span class="p">]</span> <span class="o">=</span> <span class="n">dens</span><span class="p">[:,</span> <span class="p">:]</span>
+        <span class="n">U_old</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">]</span> <span class="o">=</span> <span class="n">xmom</span><span class="p">[:,</span> <span class="p">:]</span>
+        <span class="n">U_old</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span> <span class="o">=</span> <span class="n">ymom</span><span class="p">[:,</span> <span class="p">:]</span>
+        <span class="n">U_old</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">iener</span><span class="p">]</span> <span class="o">=</span> <span class="n">ener</span><span class="p">[:,</span> <span class="p">:]</span>
+
+        <span class="c1"># Conservative update</span>
+
+        <span class="c1"># Apply contribution due to fluxes</span>
+        <span class="n">dtdV</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">/</span> <span class="n">myg</span><span class="o">.</span><span class="n">V</span><span class="o">.</span><span class="n">v</span><span class="p">()</span>
 
         <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">nvar</span><span class="p">):</span>
             <span class="n">var</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">get_var_by_index</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
 
-            <span class="n">var</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span> <span class="o">+=</span> \
-                <span class="n">dtdx</span><span class="o">*</span><span class="p">(</span><span class="n">Flux_x</span><span class="o">.</span><span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span> <span class="o">-</span> <span class="n">Flux_x</span><span class="o">.</span><span class="n">ip</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">))</span> <span class="o">+</span> \
-                <span class="n">dtdy</span><span class="o">*</span><span class="p">(</span><span class="n">Flux_y</span><span class="o">.</span><span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span> <span class="o">-</span> <span class="n">Flux_y</span><span class="o">.</span><span class="n">jp</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">))</span>
+            <span class="n">var</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span> <span class="o">+=</span> <span class="n">dtdV</span> <span class="o">*</span> \
+                <span class="p">(</span><span class="n">F_x</span><span class="o">.</span><span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="n">myg</span><span class="o">.</span><span class="n">Ax</span><span class="o">.</span><span class="n">v</span><span class="p">()</span> <span class="o">-</span> <span class="n">F_x</span><span class="o">.</span><span class="n">ip</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="n">myg</span><span class="o">.</span><span class="n">Ax</span><span class="o">.</span><span class="n">ip</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="o">+</span>
+                 <span class="n">F_y</span><span class="o">.</span><span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="n">myg</span><span class="o">.</span><span class="n">Ay</span><span class="o">.</span><span class="n">v</span><span class="p">()</span> <span class="o">-</span> <span class="n">F_y</span><span class="o">.</span><span class="n">jp</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span><span class="o">*</span><span class="n">myg</span><span class="o">.</span><span class="n">Ay</span><span class="o">.</span><span class="n">jp</span><span class="p">(</span><span class="mi">1</span><span class="p">))</span>
 
-        <span class="c1"># gravitational source terms</span>
-        <span class="n">ymom</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">+=</span> <span class="mf">0.5</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">*</span><span class="p">(</span><span class="n">dens</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">old_dens</span><span class="p">[:,</span> <span class="p">:])</span><span class="o">*</span><span class="n">grav</span>
-        <span class="n">ener</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">+=</span> <span class="mf">0.5</span><span class="o">*</span><span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="o">*</span><span class="p">(</span><span class="n">ymom</span><span class="p">[:,</span> <span class="p">:]</span> <span class="o">+</span> <span class="n">old_ymom</span><span class="p">[:,</span> <span class="p">:])</span><span class="o">*</span><span class="n">grav</span>
+        <span class="c1"># Now apply external sources</span>
+
+        <span class="c1"># For SphericalPolar (coord_type == 1) there are pressure</span>
+        <span class="c1"># gradients since we don&#39;t include pressure in xmom and ymom</span>
+        <span class="c1"># fluxes</span>
+
+        <span class="k">if</span> <span class="n">myg</span><span class="o">.</span><span class="n">coord_type</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">xmom</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">*</span> <span class="p">(</span><span class="n">qx</span><span class="o">.</span><span class="n">ip</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">ip</span><span class="p">)</span> <span class="o">-</span>
+                                         <span class="n">qx</span><span class="o">.</span><span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">ip</span><span class="p">))</span> <span class="o">/</span> <span class="n">myg</span><span class="o">.</span><span class="n">Lx</span><span class="o">.</span><span class="n">v</span><span class="p">()</span>
+            <span class="n">ymom</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span> <span class="o">-=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">*</span> <span class="p">(</span><span class="n">qy</span><span class="o">.</span><span class="n">jp</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">ip</span><span class="p">)</span> <span class="o">-</span>
+                                         <span class="n">qy</span><span class="o">.</span><span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">ip</span><span class="p">))</span> <span class="o">/</span> <span class="n">myg</span><span class="o">.</span><span class="n">Ly</span><span class="o">.</span><span class="n">v</span><span class="p">()</span>
+
+        <span class="c1"># now the external sources (including gravity).  We are going</span>
+        <span class="c1"># to do a predictor-corrector here:</span>
+        <span class="c1">#</span>
+        <span class="c1"># * compute old sources using old state: S^n = S(U^n)</span>
+        <span class="c1"># * update state full dt using old sources: U^{n+1,*} += dt * S^n</span>
+        <span class="c1"># * compute new sources using this updated state: S^{n+1) = S(U^{n+1,*})</span>
+        <span class="c1"># * correct: U^{n+1} = U^{n+1,*} + dt/2 (S^{n+1} - S^n)</span>
+
+        <span class="n">S_old</span> <span class="o">=</span> <span class="n">get_external_sources</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="p">,</span> <span class="n">U_old</span><span class="p">,</span>
+                                     <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">,</span> <span class="n">myg</span><span class="p">,</span>
+                                     <span class="n">problem_source</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">problem_source</span><span class="p">)</span>
+
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">nvar</span><span class="p">):</span>
+            <span class="n">var</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">get_var_by_index</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+            <span class="n">var</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span> <span class="o">+=</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">*</span> <span class="n">S_old</span><span class="o">.</span><span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span>
+
+        <span class="c1"># now get the new time source</span>
+
+        <span class="n">S_new</span> <span class="o">=</span> <span class="n">get_external_sources</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">t</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">data</span><span class="p">,</span>
+                                     <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">,</span> <span class="n">myg</span><span class="p">,</span> <span class="n">U_old</span><span class="o">=</span><span class="n">U_old</span><span class="p">,</span>
+                                     <span class="n">problem_source</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">problem_source</span><span class="p">)</span>
+
+        <span class="c1"># and correct</span>
+        <span class="k">for</span> <span class="n">n</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">nvar</span><span class="p">):</span>
+            <span class="n">var</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">get_var_by_index</span><span class="p">(</span><span class="n">n</span><span class="p">)</span>
+            <span class="n">var</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span> <span class="o">+=</span> <span class="mf">0.5</span> <span class="o">*</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">*</span> <span class="p">(</span><span class="n">S_new</span><span class="o">.</span><span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">)</span> <span class="o">-</span> <span class="n">S_old</span><span class="o">.</span><span class="n">v</span><span class="p">(</span><span class="n">n</span><span class="o">=</span><span class="n">n</span><span class="p">))</span>
+
+        <span class="c1"># finally, do the sponge, if desired -- this is formulated as an</span>
+        <span class="c1"># implicit update to the velocity</span>
+        <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;sponge.do_sponge&quot;</span><span class="p">):</span>
+            <span class="n">kappa_f</span> <span class="o">=</span> <span class="n">get_sponge_factor</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">rp</span><span class="p">,</span> <span class="n">myg</span><span class="p">)</span>
+
+            <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">ixmom</span><span class="p">]</span> <span class="o">/=</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">*</span> <span class="n">kappa_f</span><span class="p">)</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">data</span><span class="p">[:,</span> <span class="p">:,</span> <span class="bp">self</span><span class="o">.</span><span class="n">ivars</span><span class="o">.</span><span class="n">iymom</span><span class="p">]</span> <span class="o">/=</span> <span class="p">(</span><span class="mf">1.0</span> <span class="o">+</span> <span class="bp">self</span><span class="o">.</span><span class="n">dt</span> <span class="o">*</span> <span class="n">kappa_f</span><span class="p">)</span>
 
         <span class="k">if</span> <span class="bp">self</span><span class="o">.</span><span class="n">particles</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">particles</span><span class="o">.</span><span class="n">update_particles</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">dt</span><span class="p">)</span>
@@ -352,7 +900,10 @@
 
         <span class="n">tm_evolve</span><span class="o">.</span><span class="n">end</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Simulation.dovis"><a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Simulation.dovis">[docs]</a>    <span class="k">def</span> <span class="nf">dovis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Simulation.dovis">
+<a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Simulation.dovis">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">dovis</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Do runtime visualization.</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -384,22 +935,29 @@
         <span class="n">fields</span> <span class="o">=</span> <span class="p">[</span><span class="n">rho</span><span class="p">,</span> <span class="n">magvel</span><span class="p">,</span> <span class="n">p</span><span class="p">,</span> <span class="n">e</span><span class="p">]</span>
         <span class="n">field_names</span> <span class="o">=</span> <span class="p">[</span><span class="sa">r</span><span class="s2">&quot;$\rho$&quot;</span><span class="p">,</span> <span class="sa">r</span><span class="s2">&quot;U&quot;</span><span class="p">,</span> <span class="s2">&quot;p&quot;</span><span class="p">,</span> <span class="s2">&quot;e&quot;</span><span class="p">]</span>
 
+        <span class="n">x</span> <span class="o">=</span> <span class="n">myg</span><span class="o">.</span><span class="n">scratch_array</span><span class="p">()</span>
+        <span class="n">y</span> <span class="o">=</span> <span class="n">myg</span><span class="o">.</span><span class="n">scratch_array</span><span class="p">()</span>
+
+        <span class="k">if</span> <span class="n">myg</span><span class="o">.</span><span class="n">coord_type</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">myg</span><span class="o">.</span><span class="n">x2d</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="n">myg</span><span class="o">.</span><span class="n">y2d</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:])</span>
+            <span class="n">y</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">myg</span><span class="o">.</span><span class="n">x2d</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="n">myg</span><span class="o">.</span><span class="n">y2d</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:])</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">x</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">myg</span><span class="o">.</span><span class="n">x2d</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span>
+            <span class="n">y</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span> <span class="o">=</span> <span class="n">myg</span><span class="o">.</span><span class="n">y2d</span><span class="o">.</span><span class="n">v</span><span class="p">()[:,</span> <span class="p">:]</span>
+
         <span class="n">_</span><span class="p">,</span> <span class="n">axes</span><span class="p">,</span> <span class="n">cbar_title</span> <span class="o">=</span> <span class="n">plot_tools</span><span class="o">.</span><span class="n">setup_axes</span><span class="p">(</span><span class="n">myg</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">fields</span><span class="p">))</span>
 
         <span class="k">for</span> <span class="n">n</span><span class="p">,</span> <span class="n">ax</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">axes</span><span class="p">):</span>
             <span class="n">v</span> <span class="o">=</span> <span class="n">fields</span><span class="p">[</span><span class="n">n</span><span class="p">]</span>
 
-            <span class="n">img</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">transpose</span><span class="p">(</span><span class="n">v</span><span class="o">.</span><span class="n">v</span><span class="p">()),</span>
-                            <span class="n">interpolation</span><span class="o">=</span><span class="s2">&quot;nearest&quot;</span><span class="p">,</span> <span class="n">origin</span><span class="o">=</span><span class="s2">&quot;lower&quot;</span><span class="p">,</span>
-                            <span class="n">extent</span><span class="o">=</span><span class="p">[</span><span class="n">myg</span><span class="o">.</span><span class="n">xmin</span><span class="p">,</span> <span class="n">myg</span><span class="o">.</span><span class="n">xmax</span><span class="p">,</span> <span class="n">myg</span><span class="o">.</span><span class="n">ymin</span><span class="p">,</span> <span class="n">myg</span><span class="o">.</span><span class="n">ymax</span><span class="p">],</span>
-                            <span class="n">cmap</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
+            <span class="n">img</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">pcolormesh</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">v</span><span class="p">(),</span> <span class="n">y</span><span class="o">.</span><span class="n">v</span><span class="p">(),</span> <span class="n">v</span><span class="o">.</span><span class="n">v</span><span class="p">(),</span>
+                                <span class="n">shading</span><span class="o">=</span><span class="s2">&quot;nearest&quot;</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">cm</span><span class="p">)</span>
 
             <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="s2">&quot;x&quot;</span><span class="p">)</span>
             <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="s2">&quot;y&quot;</span><span class="p">)</span>
 
             <span class="c1"># needed for PDF rendering</span>
             <span class="n">cb</span> <span class="o">=</span> <span class="n">axes</span><span class="o">.</span><span class="n">cbar_axes</span><span class="p">[</span><span class="n">n</span><span class="p">]</span><span class="o">.</span><span class="n">colorbar</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
-            <span class="n">cb</span><span class="o">.</span><span class="n">formatter</span> <span class="o">=</span> <span class="n">matplotlib</span><span class="o">.</span><span class="n">ticker</span><span class="o">.</span><span class="n">FormatStrFormatter</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span>
             <span class="n">cb</span><span class="o">.</span><span class="n">solids</span><span class="o">.</span><span class="n">set_rasterized</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
             <span class="n">cb</span><span class="o">.</span><span class="n">solids</span><span class="o">.</span><span class="n">set_edgecolor</span><span class="p">(</span><span class="s2">&quot;face&quot;</span><span class="p">)</span>
 
@@ -417,15 +975,23 @@
             <span class="c1"># plot particles</span>
             <span class="n">ax</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">particle_positions</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">],</span>
                 <span class="n">particle_positions</span><span class="p">[:,</span> <span class="mi">1</span><span class="p">],</span> <span class="n">s</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="n">colors</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.8</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s2">&quot;Greys&quot;</span><span class="p">)</span>
-            <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="n">myg</span><span class="o">.</span><span class="n">xmin</span><span class="p">,</span> <span class="n">myg</span><span class="o">.</span><span class="n">xmax</span><span class="p">])</span>
-            <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="n">myg</span><span class="o">.</span><span class="n">ymin</span><span class="p">,</span> <span class="n">myg</span><span class="o">.</span><span class="n">ymax</span><span class="p">])</span>
+
+            <span class="k">if</span> <span class="n">myg</span><span class="o">.</span><span class="n">coord_type</span> <span class="o">==</span> <span class="mi">1</span><span class="p">:</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">x</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">x</span><span class="p">)])</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="n">np</span><span class="o">.</span><span class="n">min</span><span class="p">(</span><span class="n">y</span><span class="p">),</span> <span class="n">np</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">y</span><span class="p">)])</span>
+            <span class="k">else</span><span class="p">:</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">set_xlim</span><span class="p">([</span><span class="n">myg</span><span class="o">.</span><span class="n">xmin</span><span class="p">,</span> <span class="n">myg</span><span class="o">.</span><span class="n">xmax</span><span class="p">])</span>
+                <span class="n">ax</span><span class="o">.</span><span class="n">set_ylim</span><span class="p">([</span><span class="n">myg</span><span class="o">.</span><span class="n">ymin</span><span class="p">,</span> <span class="n">myg</span><span class="o">.</span><span class="n">ymax</span><span class="p">])</span>
 
         <span class="n">plt</span><span class="o">.</span><span class="n">figtext</span><span class="p">(</span><span class="mf">0.05</span><span class="p">,</span> <span class="mf">0.0125</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;t = </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">cc_data</span><span class="o">.</span><span class="n">t</span><span class="si">:</span><span class="s2">10.5g</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
 
         <span class="n">plt</span><span class="o">.</span><span class="n">pause</span><span class="p">(</span><span class="mf">0.001</span><span class="p">)</span>
         <span class="n">plt</span><span class="o">.</span><span class="n">draw</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="Simulation.write_extras"><a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Simulation.write_extras">[docs]</a>    <span class="k">def</span> <span class="nf">write_extras</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
+
+<div class="viewcode-block" id="Simulation.write_extras">
+<a class="viewcode-back" href="../../../pyro.compressible.html#pyro.compressible.simulation.Simulation.write_extras">[docs]</a>
+    <span class="k">def</span><span class="w"> </span><span class="nf">write_extras</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">f</span><span class="p">):</span>
 <span class="w">        </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Output simulation-specific data to the h5py file f</span>
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -434,34 +1000,76 @@
         <span class="n">gb</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">create_group</span><span class="p">(</span><span class="s2">&quot;BC&quot;</span><span class="p">)</span>
 
         <span class="c1"># the value here is the value of &quot;is_solid&quot;</span>
-        <span class="n">gb</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="s2">&quot;hse&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div></div>
+        <span class="n">gb</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="s2">&quot;hse&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+        <span class="n">gb</span><span class="o">.</span><span class="n">create_dataset</span><span class="p">(</span><span class="s2">&quot;ambient&quot;</span><span class="p">,</span> <span class="n">data</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span></div>
+</div>
+
 </pre></div>
 
-           </div>
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
           </div>
-          <footer>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By pyro development team
+</p>
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2023, pyro development team.</p>
   </div>
+  
+  <div class="footer-item">
+    
 
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
+  <p class="copyright">
+    
+      © Copyright 2024, pyro development team.
+      <br/>
+    
+  </p>
 
-</footer>
-        </div>
-      </div>
-    </section>
   </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
 
-</body>
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="../../../_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="../../../_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

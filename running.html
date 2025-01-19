@@ -1,140 +1,546 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Running &mdash; pyro 4.0.1.post53+g7b7c6baf documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Running &#8212; pyro 4.0.1.post172+ga78743ee documentation</title>
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-    <script src="_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=359afcf4" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=ebbc836c"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'running';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="Working with output" href="output.html" />
-    <link rel="prev" title="Design ideas" href="design.html" /> 
-</head>
+    <link rel="prev" title="Design ideas" href="design.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="4.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-          
-          
-          <a href="index.html" class="icon icon-home">
-            pyro
-              <img src="_static/logo.gif" class="logo" alt="Logo"/>
-          </a>
-              <div class="version">
-                4.0
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">pyro basics</span></p>
-<ul class="current">
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.gif" class="logo__image only-light" alt=""/>
+    <img src="_static/logo.gif" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">pyro 4.0</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">pyro basics</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to pyro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Setting up pyro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes.html">Notes on the numerical methods</a></li>
 <li class="toctree-l1"><a class="reference internal" href="design.html">Design ideas</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Running</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#commandline">Commandline</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#pyro-class">Pyro class</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#runtime-options">Runtime options</a></li>
-</ul>
-</li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Running</a></li>
 <li class="toctree-l1"><a class="reference internal" href="output.html">Working with output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problems.html">Adding a problem</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mesh</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mesh_basics.html">Mesh overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesh-examples.html">Mesh examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spherical-mesh.html">Spherical Polar Grid</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Solvers</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="advection_basics.html">Advection solvers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="burgers_basics.html">Burgers’ Equation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compressible_basics.html">Compressible hydrodynamics solvers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compressible_compare.html">Compressible solver comparisons</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Multigrid</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="multigrid.html">Multigrid Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_basics.html">Simple Multigrid Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid-constant-coefficients.html">Constant-Coefficient Poisson Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid-variable-coeff.html">Variable Coefficient Poisson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid-general-linear.html">General Linear Elliptic Equation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hydro Solvers</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="advection_basics.html">Advection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="burgers_basics.html">Burgers’ Equation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compressible_basics.html">Compressible hydrodynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="diffusion_basics.html">Diffusion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="incompressible_basics.html">Incompressible hydrodynamics solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="incompressible_viscous_basics.html">Incompressible viscous hydrodynamics solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lowmach_basics.html">Low Mach number hydrodynamics solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="swe_basics.html">Shallow water solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompressible_basics.html">Incompressible hydrodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lowmach_basics.html">Low Mach number hydrodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="swe_basics.html">Shallow water hydrodynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="particles_basics.html">Particles</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Utilities</span></p>
-<ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="compressible-rt-compare.html">Comparing the Compressible Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_a_problem_jupyter.html">Defining our own problem in Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rt_average.html">Horizontal Averages of Rayleigh-Taylor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advection-error.html">Error Measurement of the <code class="docutils literal notranslate"><span class="pre">advection_fv4</span></code> Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compressible-convergence.html">Convergence of the compressible solvers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Utilities</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="analysis.html">Analysis routines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Community</span></p>
-<ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="help.html">Contributing and getting help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ack.html">Acknowledgments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ack.html#history">History</a></li>
+
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Software Reference</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">API</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pyro.html">pyro package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection.html">pyro.advection package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection.problems.html">pyro.advection.problems package</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Bibliography</span></p>
-<ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection_fv4.html">pyro.advection_fv4 package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection_fv4.problems.html">pyro.advection_fv4.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection_nonuniform.html">pyro.advection_nonuniform package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection_nonuniform.problems.html">pyro.advection_nonuniform.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection_rk.html">pyro.advection_rk package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection_rk.problems.html">pyro.advection_rk.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection_weno.html">pyro.advection_weno package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection_weno.problems.html">pyro.advection_weno.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.burgers.html">pyro.burgers package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.burgers.problems.html">pyro.burgers.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.burgers_viscous.html">pyro.burgers_viscous package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.burgers_viscous.problems.html">pyro.burgers_viscous.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible.html">pyro.compressible package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible.problems.html">pyro.compressible.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible_fv4.html">pyro.compressible_fv4 package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_fv4.problems.html">pyro.compressible_fv4.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible_react.html">pyro.compressible_react package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_react.problems.html">pyro.compressible_react.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible_rk.html">pyro.compressible_rk package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_rk.problems.html">pyro.compressible_rk.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible_sdc.html">pyro.compressible_sdc package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_sdc.problems.html">pyro.compressible_sdc.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.diffusion.html">pyro.diffusion package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.diffusion.problems.html">pyro.diffusion.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.incompressible.html">pyro.incompressible package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.incompressible.problems.html">pyro.incompressible.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.incompressible_viscous.html">pyro.incompressible_viscous package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.incompressible_viscous.problems.html">pyro.incompressible_viscous.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.lm_atm.html">pyro.lm_atm package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.lm_atm.problems.html">pyro.lm_atm.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.mesh.html">pyro.mesh package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.multigrid.html">pyro.multigrid package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.multigrid.examples.html">pyro.multigrid.examples package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.particles.html">pyro.particles package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.swe.html">pyro.swe package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.swe.problems.html">pyro.swe.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.util.html">pyro.util package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliography</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="zreferences.html">References</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">pyro</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-      <li class="breadcrumb-item active">Running</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="_sources/running.rst.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2/blob/main/docs/source/running.rst?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2/edit/main/docs/source/running.rst" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2/issues/new?title=Issue%20on%20page%20%2Frunning.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/running.rst" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.rst</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Running</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commandline">Commandline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro-class">Pyro class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-options">Runtime options</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="running">
-<h1>Running<a class="headerlink" href="#running" title="Permalink to this heading"></a></h1>
-<p>Pyro can be run in two ways: either from the commandline, using the
-<code class="docutils literal notranslate"><span class="pre">pyro_sim.py</span></code> script (this will be installed into your search path)
-and passing in the solver, problem and inputs as arguments, or by
-using the <a class="reference internal" href="pyro.html#pyro.pyro_sim.Pyro" title="pyro.pyro_sim.Pyro"><code class="xref py py-func docutils literal notranslate"><span class="pre">Pyro</span></code></a> class.</p>
+<h1>Running<a class="headerlink" href="#running" title="Link to this heading">#</a></h1>
+<p>Pyro can be run in two ways:</p>
+<ul class="simple">
+<li><p>from the commandline, using the <code class="docutils literal notranslate"><span class="pre">pyro_sim.py</span></code> script (this will be installed into your search path)</p></li>
+<li><p>by using the <a class="reference internal" href="pyro.html#pyro.pyro_sim.Pyro" title="pyro.pyro_sim.Pyro"><code class="xref py py-func docutils literal notranslate"><span class="pre">Pyro</span></code></a> class directly in ipython or Jupyter</p></li>
+</ul>
 <section id="commandline">
-<h2>Commandline<a class="headerlink" href="#commandline" title="Permalink to this heading"></a></h2>
+<h2>Commandline<a class="headerlink" href="#commandline" title="Link to this heading">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">pyro_sim.py</span></code> script takes 3
 arguments: the solver name, the problem setup to run with that solver
 (this is defined in the solver’s <code class="docutils literal notranslate"><span class="pre">problems/</span></code> sub-directory), and the
@@ -163,10 +569,9 @@ in  <a class="reference internal" href="analysis.html#analysis"><span class="std
 </div>
 </section>
 <section id="pyro-class">
-<h2>Pyro class<a class="headerlink" href="#pyro-class" title="Permalink to this heading"></a></h2>
+<h2>Pyro class<a class="headerlink" href="#pyro-class" title="Link to this heading">#</a></h2>
 <p>Alternatively, pyro can be run using the <a class="reference internal" href="pyro.html#pyro.pyro_sim.Pyro" title="pyro.pyro_sim.Pyro"><code class="xref py py-func docutils literal notranslate"><span class="pre">Pyro</span></code></a> class. This provides
-an interface that enables simulations to be set up and run in a Jupyter notebook – see
-<code class="docutils literal notranslate"><span class="pre">examples/examples.ipynb</span></code> for an example notebook. A simulation can be set up and run
+an interface that enables simulations to be set up and run in a Jupyter notebook. A simulation can be set up and run
 by carrying out the following steps:</p>
 <ul class="simple">
 <li><p>create a <a class="reference internal" href="pyro.html#pyro.pyro_sim.Pyro" title="pyro.pyro_sim.Pyro"><code class="xref py py-func docutils literal notranslate"><span class="pre">Pyro</span></code></a> object, initializing it with a specific solver</p></li>
@@ -175,22 +580,35 @@ by carrying out the following steps:</p>
 </ul>
 <p>For example, if we wished to use the <a class="reference internal" href="pyro.compressible.html#module-pyro.compressible" title="pyro.compressible"><code class="xref py py-mod docutils literal notranslate"><span class="pre">compressible</span></code></a> solver to run the
 Kelvin-Helmholtz problem <code class="docutils literal notranslate"><span class="pre">kh</span></code>, we would do the following:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyro.pyro_sim</span> <span class="kn">import</span> <span class="n">Pyro</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pyro</span><span class="w"> </span><span class="kn">import</span> <span class="n">Pyro</span>
 <span class="n">p</span> <span class="o">=</span> <span class="n">Pyro</span><span class="p">(</span><span class="s2">&quot;compressible&quot;</span><span class="p">)</span>
-<span class="n">p</span><span class="o">.</span><span class="n">initialize_problem</span><span class="p">(</span><span class="n">problem_name</span><span class="o">=</span><span class="s2">&quot;kh&quot;</span><span class="p">,</span>
-                     <span class="n">inputs_file</span><span class="o">=</span><span class="s2">&quot;inputs.kh&quot;</span><span class="p">)</span>
+<span class="n">p</span><span class="o">.</span><span class="n">initialize_problem</span><span class="p">(</span><span class="s2">&quot;kh&quot;</span><span class="p">)</span>
 <span class="n">p</span><span class="o">.</span><span class="n">run_sim</span><span class="p">()</span>
 </pre></div>
+</div>
+<p>This will use the default set of parameters for the problem specified
+in the inputs file defined by <code class="docutils literal notranslate"><span class="pre">DEFAULT_INPUTS</span></code> in the problem
+initialization module.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>By default, I/O, visualization, and verbosity are disabled when we run in Jupyter.</p>
 </div>
 <p>Instead of using an inputs file to define the problem parameters, we can define a
 dictionary of parameters and pass them into the <a class="reference internal" href="pyro.html#pyro.pyro_sim.Pyro.initialize_problem" title="pyro.pyro_sim.Pyro.initialize_problem"><code class="xref py py-func docutils literal notranslate"><span class="pre">initialize_problem</span></code></a> function using the keyword argument <code class="docutils literal notranslate"><span class="pre">inputs_dict</span></code>.
 If an inputs file is also passed into the function, the parameters in the dictionary
-will override any parameters in the file. For example, if we wished to turn off
-visualization for the previous example, we would do:</p>
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;vis.dovis&quot;</span><span class="p">:</span><span class="mi">0</span><span class="p">}</span>
-<span class="n">p</span><span class="o">.</span><span class="n">initialize_problem</span><span class="p">(</span><span class="n">problem_name</span><span class="o">=</span><span class="s2">&quot;kh&quot;</span><span class="p">,</span>
-                     <span class="n">inputs_file</span><span class="o">=</span><span class="s2">&quot;inputs.kh&quot;</span><span class="p">,</span>
-                     <span class="n">inputs_dict</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
+will override any parameters in the file.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you want to see all of the runtime parameters and their current values, you can
+simply print the <code class="docutils literal notranslate"><span class="pre">Pyro</span></code> object:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<p>For example, if we wished to turn on
+verbosity for the previous example, we would do:</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">parameters</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;driver.verbose&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">}</span>
+<span class="n">p</span><span class="o">.</span><span class="n">initialize_problem</span><span class="p">(</span><span class="s2">&quot;kh&quot;</span><span class="p">,</span> <span class="n">inputs_dict</span><span class="o">=</span><span class="n">parameters</span><span class="p">)</span>
 </pre></div>
 </div>
 <p>It’s possible to evolve the simulation forward timestep by timestep manually using
@@ -204,7 +622,7 @@ simulation forward by a single step, we’d run</p>
 single timestep and do output/visualization (if required).</p>
 </section>
 <section id="runtime-options">
-<h2>Runtime options<a class="headerlink" href="#runtime-options" title="Permalink to this heading"></a></h2>
+<h2>Runtime options<a class="headerlink" href="#runtime-options" title="Link to this heading">#</a></h2>
 <p>The behavior of the main driver, the solver, and the problem setup can
 be controlled by runtime parameters specified in the inputs file (or
 via the command line or passed into the <code class="docutils literal notranslate"><span class="pre">initialize_problem</span></code> function).
@@ -214,15 +632,17 @@ parameters are stored in three places:</p>
 <ul class="simple">
 <li><p>the <code class="docutils literal notranslate"><span class="pre">pyro/_defaults</span></code> file</p></li>
 <li><p>the solver’s <code class="docutils literal notranslate"><span class="pre">_defaults</span></code> file</p></li>
-<li><p>problem’s <code class="docutils literal notranslate"><span class="pre">_defaults</span></code> file (named <code class="docutils literal notranslate"><span class="pre">_problem-name.defaults</span></code> in the
-solver’s <code class="docutils literal notranslate"><span class="pre">problem/</span></code> sub-directory).</p></li>
+<li><p>problem-specific parameters: each problem module provides a dictionary
+called <code class="docutils literal notranslate"><span class="pre">PROBLEM_PARAMS</span></code> that is used to define the problem-specific
+parameters and their defaults.</p></li>
 </ul>
-<p>These three files are parsed at runtime to define the list of valid
+<p>These defaults are parsed at runtime to define the list of valid
 parameters. The inputs file is read next and used to override the
 default value of any of these previously defined
-parameters. Additionally, any parameter can be specified at the end of
-the commandline, and these will be used to override the defaults. The
-collection of runtime parameters is stored in a
+parameters.  Then any parameters passed to <code class="docutils literal notranslate"><span class="pre">Pyro</span></code> via a dictionary
+or added to the commandline when using <code class="docutils literal notranslate"><span class="pre">pyro_sim.py</span></code> are parsed
+and override the current values.</p>
+<p>The collection of runtime parameters is stored in a
 <a class="reference internal" href="pyro.util.html#pyro.util.runparams.RuntimeParameters" title="pyro.util.runparams.RuntimeParameters"><code class="xref py py-func docutils literal notranslate"><span class="pre">RuntimeParameters</span></code></a> object.</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">runparams.py</span></code> module in <code class="docutils literal notranslate"><span class="pre">util/</span></code> controls access to the runtime
 parameters. You can setup the runtime parameters, parse an inputs
@@ -234,15 +654,18 @@ as:</p>
 <span class="n">cfl</span> <span class="o">=</span> <span class="n">rp</span><span class="o">.</span><span class="n">get_param</span><span class="p">(</span><span class="s2">&quot;hydro.cfl&quot;</span><span class="p">)</span>
 </pre></div>
 </div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
 <p>When pyro is run, the file <code class="docutils literal notranslate"><span class="pre">inputs.auto</span></code> is output containing the
 full list of runtime parameters, their value for the simulation, and
 the comment that was associated with them from the <code class="docutils literal notranslate"><span class="pre">_defaults</span></code>
 files. This is a useful way to see what parameters are in play for a
 given simulation.</p>
+</div>
 <p>All solvers use the following parameters:</p>
 <ul>
-<li><p>section: [driver]</p>
-<table class="docutils align-default">
+<li><p>section: <code class="docutils literal notranslate"><span class="pre">[driver]</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>option</p></th>
 <th class="head"><p>value</p></th>
@@ -250,35 +673,36 @@ given simulation.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>tmax</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">tmax</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1.0</span></code></p></td>
 <td><p>maximum simulation time to evolve</p></td>
 </tr>
-<tr class="row-odd"><td><p>max_steps</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">max_steps</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">10000</span></code></p></td>
 <td><p>maximum number of steps to take</p></td>
 </tr>
-<tr class="row-even"><td><p>fix_dt</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">fix_dt</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">-1.0</span></code></p></td>
 <td></td>
 </tr>
-<tr class="row-odd"><td><p>init_tstep_factor</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">init_tstep_factor</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0.01</span></code></p></td>
 <td><p>first timestep = init_tstep_factor * CFL timestep</p></td>
 </tr>
-<tr class="row-even"><td><p>max_dt_change</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">max_dt_change</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">2.0</span></code></p></td>
 <td><p>max amount the timestep can change between steps</p></td>
 </tr>
-<tr class="row-odd"><td><p>verbose</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">verbose</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1.0</span></code></p></td>
 <td><p>verbosity</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 </li>
-<li><p>section: [io]</p>
-<table class="docutils align-default">
+<li><p>section: <code class="docutils literal notranslate"><span class="pre">[io]</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>option</p></th>
 <th class="head"><p>value</p></th>
@@ -286,27 +710,33 @@ given simulation.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>basename</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">basename</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">pyro_</span></code></p></td>
 <td><p>basename for output files</p></td>
 </tr>
-<tr class="row-odd"><td><p>dt_out</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">dt_out</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0.1</span></code></p></td>
 <td><p>simulation time between writing output files</p></td>
 </tr>
-<tr class="row-even"><td><p>n_out</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">n_out</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">10000</span></code></p></td>
 <td><p>number of timesteps between writing output files</p></td>
 </tr>
-<tr class="row-odd"><td><p>do_io</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">do_io</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
 <td><p>do we output at all?</p></td>
 </tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">force_final_output</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
+<td><p>regardless of do_io, do we output when the
+simulation ends?</p></td>
+</tr>
 </tbody>
 </table>
+</div>
 </li>
-<li><p>section: [mesh]</p>
-<table class="docutils align-default">
+<li><p>section: <code class="docutils literal notranslate"><span class="pre">[mesh]</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>option</p></th>
 <th class="head"><p>value</p></th>
@@ -314,51 +744,57 @@ given simulation.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>xmin</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">grid_type</span></code></p></td>
+<td><p><code class="docutils literal notranslate"><span class="pre">Cartesian2d</span></code></p></td>
+<td><p>Geometry of the Grid (‘Cartesian2d’ or
+‘SphericalPolar’)</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">xmin</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0.0</span></code></p></td>
 <td><p>domain minimum x-coordinate</p></td>
 </tr>
-<tr class="row-odd"><td><p>xmax</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">xmax</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1.0</span></code></p></td>
 <td><p>domain maximum x-coordinate</p></td>
 </tr>
-<tr class="row-even"><td><p>ymin</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ymin</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0.0</span></code></p></td>
 <td><p>domain minimum y-coordinate</p></td>
 </tr>
-<tr class="row-odd"><td><p>ymax</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ymax</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1.0</span></code></p></td>
 <td><p>domain maximum y-coordinate</p></td>
 </tr>
-<tr class="row-even"><td><p>xlboundary</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">xlboundary</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">reflect</span></code></p></td>
 <td><p>minimum x BC (‘reflect’, ‘outflow’, or ‘periodic’)</p></td>
 </tr>
-<tr class="row-odd"><td><p>xrboundary</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">xrboundary</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">reflect</span></code></p></td>
 <td><p>maximum x BC (‘reflect’, ‘outflow’, or ‘periodic’)</p></td>
 </tr>
-<tr class="row-even"><td><p>ylboundary</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">ylboundary</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">reflect</span></code></p></td>
 <td><p>minimum y BC (‘reflect’, ‘outflow’, or ‘periodic’)</p></td>
 </tr>
-<tr class="row-odd"><td><p>yrboundary</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">yrboundary</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">reflect</span></code></p></td>
 <td><p>maximum y BC (‘reflect’, ‘outflow’, or ‘periodic’)</p></td>
 </tr>
-<tr class="row-even"><td><p>nx</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">nx</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">25</span></code></p></td>
 <td><p>number of zones in the x-direction</p></td>
 </tr>
-<tr class="row-odd"><td><p>ny</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">ny</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">25</span></code></p></td>
 <td><p>number of zones in the y-direction</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 </li>
-<li><p>section: [particles]</p>
-<table class="docutils align-default">
+<li><p>section: <code class="docutils literal notranslate"><span class="pre">[particles]</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>option</p></th>
 <th class="head"><p>value</p></th>
@@ -366,23 +802,24 @@ given simulation.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>do_particles</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">do_particles</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
 <td><p>include particles? (1=yes, 0=no)</p></td>
 </tr>
-<tr class="row-odd"><td><p>n_particles</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">n_particles</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">100</span></code></p></td>
 <td><p>number of particles</p></td>
 </tr>
-<tr class="row-even"><td><p>particle_generator</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">particle_generator</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">random</span></code></p></td>
 <td><p>how do we generate particles? (random, grid)</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 </li>
-<li><p>section: [vis]</p>
-<table class="docutils align-default">
+<li><p>section: <code class="docutils literal notranslate"><span class="pre">[vis]</span></code></p>
+<div class="pst-scrollable-table-container"><table class="table">
 <thead>
 <tr class="row-odd"><th class="head"><p>option</p></th>
 <th class="head"><p>value</p></th>
@@ -390,50 +827,123 @@ given simulation.</p>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>dovis</p></td>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">dovis</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">1</span></code></p></td>
 <td><p>runtime visualization? (1=yes, 0=no)</p></td>
 </tr>
-<tr class="row-odd"><td><p>store_images</p></td>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">store_images</span></code></p></td>
 <td><p><code class="docutils literal notranslate"><span class="pre">0</span></code></p></td>
 <td><p>store vis images to files (1=yes, 0=no)</p></td>
 </tr>
 </tbody>
 </table>
+</div>
 </li>
 </ul>
 </section>
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="design.html" class="btn btn-neutral float-left" title="Design ideas" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="output.html" class="btn btn-neutral float-right" title="Working with output" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2023, pyro development team.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="design.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Design ideas</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="output.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Working with output</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#commandline">Commandline</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pyro-class">Pyro class</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#runtime-options">Runtime options</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By pyro development team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, pyro development team.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>

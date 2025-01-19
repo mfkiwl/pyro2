@@ -1,62 +1,161 @@
-<!DOCTYPE html>
-<html class="writer-html5" lang="en" >
-<head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Variable Coefficient Poisson &mdash; pyro 4.0.1.post53+g7b7c6baf documentation</title>
-      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-      <link rel="stylesheet" href="_static/graphviz.css" type="text/css" />
-      <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
-      <link rel="stylesheet" href="_static/nbsphinx-code-cells.css" type="text/css" />
-      <link rel="stylesheet" href="_static/theme_overrides.css" type="text/css" />
-  <!--[if lt IE 9]>
-    <script src="_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Variable Coefficient Poisson &#8212; pyro 4.0.1.post172+ga78743ee documentation</title>
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-        <script src="_static/clipboard.min.js"></script>
-        <script src="_static/copybutton.js"></script>
-        <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
-        <script>window.MathJax = {"tex": {"inlineMath": [["$", "$"], ["\\(", "\\)"]], "processEscapes": true}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-        <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script src="_static/js/theme.js"></script>
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  <!--
+    this give us a css class that will be invisible only if js is disabled
+  -->
+  <noscript>
+    <style>
+      .pst-js-only { display: none !important; }
+
+    </style>
+  </noscript>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=8878045cc6db502f8baf" rel="stylesheet" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=a3416100" />
+    <link rel="stylesheet" type="text/css" href="_static/graphviz.css?v=4ae1632d" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/nbsphinx-code-cells.css?v=2aa19091" />
+    <link rel="stylesheet" type="text/css" href="_static/myfile.css?v=359afcf4" />
+  
+  <!-- So that users can add custom icons -->
+  <script src="_static/scripts/fontawesome.js?digest=8878045cc6db502f8baf"></script>
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf" />
+
+    <script src="_static/documentation_options.js?v=ebbc836c"></script>
+    <script src="_static/doctools.js?v=9bcbadda"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script>window.MathJax = {"tex": {"inlineMath": [["\\(", "\\)"]], "processEscapes": true, "displayMath": [["\\[", "\\]"]]}, "options": {"ignoreHtmlClass": "tex2jax_ignore|mathjax_ignore|document", "processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'multigrid-variable-coeff';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="General Linear Elliptic Equation" href="multigrid-general-linear.html" />
-    <link rel="prev" title="Constant-Coefficient Poisson Equation" href="multigrid-constant-coefficients.html" /> 
-</head>
+    <link rel="prev" title="Constant-Coefficient Poisson Equation" href="multigrid-constant-coefficients.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  <meta name="docsearch:version" content="4.0" />
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
 
-<body class="wy-body-for-nav"> 
-  <div class="wy-grid-for-nav">
-    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
-      <div class="wy-side-scroll">
-        <div class="wy-side-nav-search" >
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
-          
-          
-          <a href="index.html" class="icon icon-home">
-            pyro
-              <img src="_static/logo.gif" class="logo" alt="Logo"/>
-          </a>
-              <div class="version">
-                4.0
-              </div>
-<div role="search">
-  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
-    <input type="hidden" name="check_keywords" value="yes" />
-    <input type="hidden" name="area" value="default" />
-  </form>
+  
+  <dialog id="pst-search-dialog">
+    
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         placeholder="Search..."
+         aria-label="Search..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form>
+  </dialog>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
 </div>
-        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <p class="caption" role="heading"><span class="caption-text">pyro basics</span></p>
-<ul>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <dialog id="pst-primary-sidebar-modal"></dialog>
+      <div id="pst-primary-sidebar" class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="index.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.gif" class="logo__image only-light" alt=""/>
+    <img src="_static/logo.gif" class="logo__image only-dark pst-js-only" alt=""/>
+  
+  
+    <p class="title logo__title">pyro 4.0</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+<button class="btn search-button-field search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+ <i class="fa-solid fa-magnifying-glass"></i>
+ <span class="search-button__default-text">Search</span>
+ <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+</button></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">pyro basics</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction to pyro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Setting up pyro</a></li>
 <li class="toctree-l1"><a class="reference internal" href="notes.html">Notes on the numerical methods</a></li>
@@ -64,83 +163,381 @@
 <li class="toctree-l1"><a class="reference internal" href="running.html">Running</a></li>
 <li class="toctree-l1"><a class="reference internal" href="output.html">Working with output</a></li>
 <li class="toctree-l1"><a class="reference internal" href="problems.html">Adding a problem</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Mesh</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="mesh_basics.html">Mesh overview</a></li>
 <li class="toctree-l1"><a class="reference internal" href="mesh-examples.html">Mesh examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="spherical-mesh.html">Spherical Polar Grid</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Solvers</span></p>
-<ul class="current">
-<li class="toctree-l1"><a class="reference internal" href="advection_basics.html">Advection solvers</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Multigrid</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="multigrid.html">Multigrid Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid_basics.html">Simple Multigrid Examples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid-constant-coefficients.html">Constant-Coefficient Poisson Equation</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Variable Coefficient Poisson</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multigrid-general-linear.html">General Linear Elliptic Equation</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Hydro Solvers</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="advection_basics.html">Advection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="burgers_basics.html">Burgers’ Equation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compressible_basics.html">Compressible hydrodynamics solvers</a></li>
-<li class="toctree-l1"><a class="reference internal" href="compressible_compare.html">Compressible solver comparisons</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="multigrid.html">Multigrid Solvers</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="multigrid_basics.html">Multigrid Class Overview</a></li>
-<li class="toctree-l2"><a class="reference internal" href="multigrid-constant-coefficients.html">Constant-Coefficient Poisson Equation</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Variable Coefficient Poisson</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#Setting-up-the-solver">Setting up the solver</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Solving-the-system">Solving the system</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Visualizing-the-solution">Visualizing the solution</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#Comparing-to-the-exact-solution">Comparing to the exact solution</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="multigrid-general-linear.html">General Linear Elliptic Equation</a></li>
-<li class="toctree-l2"><a class="reference internal" href="multigrid_exercises.html">Exercises</a></li>
-</ul>
-</li>
+<li class="toctree-l1"><a class="reference internal" href="compressible_basics.html">Compressible hydrodynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="diffusion_basics.html">Diffusion</a></li>
-<li class="toctree-l1"><a class="reference internal" href="incompressible_basics.html">Incompressible hydrodynamics solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="incompressible_viscous_basics.html">Incompressible viscous hydrodynamics solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="lowmach_basics.html">Low Mach number hydrodynamics solver</a></li>
-<li class="toctree-l1"><a class="reference internal" href="swe_basics.html">Shallow water solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="incompressible_basics.html">Incompressible hydrodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lowmach_basics.html">Low Mach number hydrodynamics</a></li>
+<li class="toctree-l1"><a class="reference internal" href="swe_basics.html">Shallow water hydrodynamics</a></li>
 <li class="toctree-l1"><a class="reference internal" href="particles_basics.html">Particles</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Utilities</span></p>
-<ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Examples</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="compressible-rt-compare.html">Comparing the Compressible Solvers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="adding_a_problem_jupyter.html">Defining our own problem in Jupyter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rt_average.html">Horizontal Averages of Rayleigh-Taylor</a></li>
+<li class="toctree-l1"><a class="reference internal" href="advection-error.html">Error Measurement of the <code class="docutils literal notranslate"><span class="pre">advection_fv4</span></code> Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="compressible-convergence.html">Convergence of the compressible solvers</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Utilities</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="analysis.html">Analysis routines</a></li>
 <li class="toctree-l1"><a class="reference internal" href="testing.html">Testing</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Community</span></p>
-<ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Community</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="help.html">Contributing and getting help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ack.html">Acknowledgments</a></li>
-<li class="toctree-l1"><a class="reference internal" href="ack.html#history">History</a></li>
+
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Software Reference</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">API</a></li>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Software Reference</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">API</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2 has-children"><a class="reference internal" href="pyro.html">pyro package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection.html">pyro.advection package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection.problems.html">pyro.advection.problems package</a></li>
 </ul>
-<p class="caption" role="heading"><span class="caption-text">Bibliography</span></p>
-<ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection_fv4.html">pyro.advection_fv4 package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection_fv4.problems.html">pyro.advection_fv4.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection_nonuniform.html">pyro.advection_nonuniform package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection_nonuniform.problems.html">pyro.advection_nonuniform.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection_rk.html">pyro.advection_rk package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection_rk.problems.html">pyro.advection_rk.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.advection_weno.html">pyro.advection_weno package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.advection_weno.problems.html">pyro.advection_weno.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.burgers.html">pyro.burgers package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.burgers.problems.html">pyro.burgers.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.burgers_viscous.html">pyro.burgers_viscous package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.burgers_viscous.problems.html">pyro.burgers_viscous.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible.html">pyro.compressible package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible.problems.html">pyro.compressible.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible_fv4.html">pyro.compressible_fv4 package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_fv4.problems.html">pyro.compressible_fv4.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible_react.html">pyro.compressible_react package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_react.problems.html">pyro.compressible_react.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible_rk.html">pyro.compressible_rk package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_rk.problems.html">pyro.compressible_rk.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.compressible_sdc.html">pyro.compressible_sdc package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.compressible_sdc.problems.html">pyro.compressible_sdc.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.diffusion.html">pyro.diffusion package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.diffusion.problems.html">pyro.diffusion.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.incompressible.html">pyro.incompressible package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.incompressible.problems.html">pyro.incompressible.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.incompressible_viscous.html">pyro.incompressible_viscous package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.incompressible_viscous.problems.html">pyro.incompressible_viscous.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.lm_atm.html">pyro.lm_atm package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.lm_atm.problems.html">pyro.lm_atm.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.mesh.html">pyro.mesh package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.multigrid.html">pyro.multigrid package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.multigrid.examples.html">pyro.multigrid.examples package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.particles.html">pyro.particles package</a></li>
+<li class="toctree-l3 has-children"><a class="reference internal" href="pyro.swe.html">pyro.swe package</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l4"><a class="reference internal" href="pyro.swe.problems.html">pyro.swe.problems package</a></li>
+</ul>
+</details></li>
+<li class="toctree-l3"><a class="reference internal" href="pyro.util.html">pyro.util package</a></li>
+</ul>
+</details></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Bibliography</span></p>
+<ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="zreferences.html">References</a></li>
 </ul>
 
-        </div>
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+      <div class="sidebar-primary-item">
+<div id="ethical-ad-placement"
+      class="flat"
+      data-ea-publisher="readthedocs"
+      data-ea-type="readthedocs-sidebar"
+      data-ea-manual="true">
+</div></div>
+  </div>
+
+
       </div>
-    </nav>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
-          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="index.html">pyro</a>
-      </nav>
+<div class="sbt-scroll-pixel-helper"></div>
 
-      <div class="wy-nav-content">
-        <div class="rst-content">
-          <div role="navigation" aria-label="Page navigation">
-  <ul class="wy-breadcrumbs">
-      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="multigrid.html">Multigrid Solvers</a></li>
-      <li class="breadcrumb-item active">Variable Coefficient Poisson</li>
-      <li class="wy-breadcrumbs-aside">
-            <a href="_sources/multigrid-variable-coeff.ipynb.txt" rel="nofollow"> View page source</a>
-      </li>
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2/blob/main/docs/source/multigrid-variable-coeff.ipynb?plain=1" target="_blank"
+   class="btn btn-sm btn-source-file-button dropdown-item"
+   title="Show source"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-code"></i>
+  </span>
+<span class="btn__text-container">Show source</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2/edit/main/docs/source/multigrid-variable-coeff.ipynb" target="_blank"
+   class="btn btn-sm btn-source-edit-button dropdown-item"
+   title="Suggest edit"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-pencil-alt"></i>
+  </span>
+<span class="btn__text-container">Suggest edit</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/python-hydro/pyro2/issues/new?title=Issue%20on%20page%20%2Fmultigrid-variable-coeff.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
   </ul>
-  <hr/>
 </div>
-          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
-           <div itemprop="articleBody">
-             
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/multigrid-variable-coeff.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button pst-js-only" aria-label="Color mode" data-bs-title="Color mode"  data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <i class="theme-switch fa-solid fa-sun                fa-lg" data-mode="light" title="Light"></i>
+  <i class="theme-switch fa-solid fa-moon               fa-lg" data-mode="dark"  title="Dark"></i>
+  <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"  title="System Settings"></i>
+</button>
+
+
+<button class="btn btn-sm pst-navbar-icon search-button search-button__button pst-js-only" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+</button>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Variable Coefficient Poisson</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Setting-up-the-solver">Setting up the solver</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Solving-the-system">Solving the system</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Visualizing-the-solution">Visualizing the solution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Comparing-to-the-exact-solution">Comparing to the exact solution</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
   <section id="Variable-Coefficient-Poisson">
-<h1>Variable Coefficient Poisson<a class="headerlink" href="#Variable-Coefficient-Poisson" title="Permalink to this heading"></a></h1>
+<h1>Variable Coefficient Poisson<a class="headerlink" href="#Variable-Coefficient-Poisson" title="Link to this heading">#</a></h1>
 <p>We want to solve an equation of the form <span class="math notranslate nohighlight">\(\nabla \cdot (\alpha \nabla \phi) = f\)</span></p>
 <p>We’ll do this with periodic boundary conditions. Consider the coefficient <span class="math notranslate nohighlight">\(\alpha\)</span> of the form:</p>
 <div class="math notranslate nohighlight">
@@ -155,18 +552,18 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
 </pre></div>
 </div>
 </div>
 <section id="Setting-up-the-solver">
-<h2>Setting up the solver<a class="headerlink" href="#Setting-up-the-solver" title="Permalink to this heading"></a></h2>
+<h2>Setting up the solver<a class="headerlink" href="#Setting-up-the-solver" title="Link to this heading">#</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">pyro.multigrid.variable_coeff_MG</span> <span class="k">as</span> <span class="nn">MG</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pyro.multigrid.variable_coeff_MG</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">MG</span>
 </pre></div>
 </div>
 </div>
@@ -174,7 +571,7 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">true</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">true</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -183,7 +580,7 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">alpha</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">alpha</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="mf">2.0</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mf">2.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
 </div>
@@ -192,7 +589,7 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">f</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">):</span>
     <span class="k">return</span> <span class="o">-</span><span class="mf">16.0</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">**</span><span class="mi">2</span><span class="o">*</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">cos</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">y</span><span class="p">)</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> \
         <span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">x</span><span class="p">)</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">sin</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">np</span><span class="o">.</span><span class="n">pi</span><span class="o">*</span><span class="n">y</span><span class="p">)</span>
 </pre></div>
@@ -203,8 +600,8 @@
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
 </div>
-<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">pyro.mesh</span> <span class="kn">import</span> <span class="n">patch</span>
-<span class="kn">import</span> <span class="nn">pyro.mesh.boundary</span> <span class="k">as</span> <span class="nn">bnd</span>
+<div class="input_area highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">pyro.mesh</span><span class="w"> </span><span class="kn">import</span> <span class="n">patch</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pyro.mesh.boundary</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">bnd</span>
 </pre></div>
 </div>
 </div>
@@ -248,7 +645,7 @@
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-rhs sum:      3.406203298e-12
+rhs sum:       2.07633187e-12
 </pre></div></div>
 </div>
 <p>Now we can create the multigrid object</p>
@@ -379,12 +776,12 @@ cc data: nx = 128, ny = 128, ng = 1
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-Source norm =  81.38684285750472
+Source norm =  81.3868428575047
 </pre></div></div>
 </div>
 </section>
 <section id="Solving-the-system">
-<h2>Solving the system<a class="headerlink" href="#Solving-the-system" title="Permalink to this heading"></a></h2>
+<h2>Solving the system<a class="headerlink" href="#Solving-the-system" title="Link to this heading">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
@@ -398,7 +795,7 @@ Source norm =  81.38684285750472
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-source norm =  81.38684285750472
+source norm =  81.3868428575047
 &lt;&lt;&lt; beginning V-cycle (cycle 1) &gt;&gt;&gt;
 
   level =  6, nx =  128, residual change:     81.3868 →     112.091
@@ -406,15 +803,15 @@ source norm =  81.38684285750472
   level =  4, nx =   32, residual change:     71.2411 →     68.0705
   level =  3, nx =   16, residual change:     47.6577 →     14.4578
   level =  2, nx =    8, residual change:      9.8448 →   0.0171409
-  level =  1, nx =    4, residual change:   0.0106141 →  5.9609e-16
+  level =  1, nx =    4, residual change:   0.0106141 → 1.69329e-16
   bottom solve
-  level =  1, nx =    4, residual change: 1.08342e-15 → 1.08342e-15
+  level =  1, nx =    4, residual change: 3.07629e-16 → 3.07629e-16
   level =  2, nx =    8, residual change:   0.0168243 →   0.0168243
   level =  3, nx =   16, residual change:     14.4901 →     14.4901
   level =  4, nx =   32, residual change:      69.371 →      69.371
   level =  5, nx =   64, residual change:     103.884 →     103.884
   level =  6, nx =  128, residual change:     115.511 →     115.511
-cycle 1: relative err = 1.0000000000000007, residual err = 0.02557321996190121
+cycle 1: relative err = 1.0000000000000007, residual err = 0.025573219961900512
 
 &lt;&lt;&lt; beginning V-cycle (cycle 2) &gt;&gt;&gt;
 
@@ -423,15 +820,15 @@ cycle 1: relative err = 1.0000000000000007, residual err = 0.02557321996190121
   level =  4, nx =   32, residual change:     1.29871 →     1.24144
   level =  3, nx =   16, residual change:    0.877452 →    0.256041
   level =  2, nx =    8, residual change:    0.180588 → 0.000272285
-  level =  1, nx =    4, residual change: 0.000187447 → 7.26373e-16
+  level =  1, nx =    4, residual change: 0.000187447 → 6.55867e-17
   bottom solve
-  level =  1, nx =    4, residual change: 1.31991e-15 → 1.31991e-15
+  level =  1, nx =    4, residual change: 1.19217e-16 → 1.19217e-16
   level =  2, nx =    8, residual change: 0.000298554 → 0.000298554
   level =  3, nx =   16, residual change:     0.33718 →     0.33718
   level =  4, nx =   32, residual change:     1.72809 →     1.72809
   level =  5, nx =   64, residual change:     2.60971 →     2.60971
   level =  6, nx =  128, residual change:     2.89721 →     2.89721
-cycle 2: relative err = 2.1803634389910944, residual err = 0.0006486396426304593
+cycle 2: relative err = 2.1803634390217064, residual err = 0.0006486396426301177
 
 &lt;&lt;&lt; beginning V-cycle (cycle 3) &gt;&gt;&gt;
 
@@ -440,15 +837,15 @@ cycle 2: relative err = 2.1803634389910944, residual err = 0.0006486396426304593
   level =  4, nx =   32, residual change:    0.033097 →   0.0318323
   level =  3, nx =   16, residual change:   0.0224975 →  0.00656631
   level =  2, nx =    8, residual change:  0.00463131 → 6.95479e-06
-  level =  1, nx =    4, residual change:  4.7921e-06 → 3.11033e-16
+  level =  1, nx =    4, residual change:  4.7921e-06 → 3.47155e-16
   bottom solve
-  level =  1, nx =    4, residual change: 5.65184e-16 → 5.65184e-16
+  level =  1, nx =    4, residual change: 6.30821e-16 → 6.30821e-16
   level =  2, nx =    8, residual change: 7.63309e-06 → 7.63309e-06
   level =  3, nx =   16, residual change:  0.00864876 →  0.00864876
   level =  4, nx =   32, residual change:   0.0442789 →   0.0442789
   level =  5, nx =   64, residual change:   0.0665472 →   0.0665472
   level =  6, nx =  128, residual change:   0.0736819 →   0.0736819
-cycle 3: relative err = 0.04844393523164513, residual err = 1.659245814782389e-05
+cycle 3: relative err = 0.04844393523115633, residual err = 1.659245815001406e-05
 
 &lt;&lt;&lt; beginning V-cycle (cycle 4) &gt;&gt;&gt;
 
@@ -457,15 +854,15 @@ cycle 3: relative err = 0.04844393523164513, residual err = 1.659245814782389e-0
   level =  4, nx =   32, residual change: 0.000846751 → 0.000816239
   level =  3, nx =   16, residual change: 0.000576837 → 0.000168502
   level =  2, nx =    8, residual change:  0.00011884 → 1.78399e-07
-  level =  1, nx =    4, residual change: 1.22925e-07 → 1.19517e-15
+  level =  1, nx =    4, residual change: 1.22925e-07 →  2.1827e-16
   bottom solve
-  level =  1, nx =    4, residual change: 2.17176e-15 → 2.17176e-15
+  level =  1, nx =    4, residual change: 3.96622e-16 → 3.96622e-16
   level =  2, nx =    8, residual change: 1.95801e-07 → 1.95801e-07
   level =  3, nx =   16, residual change: 0.000221902 → 0.000221902
   level =  4, nx =   32, residual change:   0.0011347 →   0.0011347
   level =  5, nx =   64, residual change:  0.00170278 →  0.00170278
   level =  6, nx =  128, residual change:  0.00188597 →  0.00188597
-cycle 4: relative err = 0.0012759605328310877, residual err = 4.27289464337961e-07
+cycle 4: relative err = 0.0012759605329324085, residual err = 4.2728946362388976e-07
 
 &lt;&lt;&lt; beginning V-cycle (cycle 5) &gt;&gt;&gt;
 
@@ -474,15 +871,15 @@ cycle 4: relative err = 0.0012759605328310877, residual err = 4.27289464337961e-
   level =  4, nx =   32, residual change:  2.1726e-05 → 2.09217e-05
   level =  3, nx =   16, residual change: 1.47845e-05 → 4.32098e-06
   level =  2, nx =    8, residual change: 3.04737e-06 → 4.57173e-09
-  level =  1, nx =    4, residual change: 3.15043e-09 → 6.74202e-16
+  level =  1, nx =    4, residual change: 3.15043e-09 → 4.90471e-17
   bottom solve
-  level =  1, nx =    4, residual change:  1.2251e-15 →  1.2251e-15
+  level =  1, nx =    4, residual change: 8.91242e-17 → 8.91242e-17
   level =  2, nx =    8, residual change: 5.01821e-09 → 5.01821e-09
   level =  3, nx =   16, residual change: 5.68972e-06 → 5.68972e-06
   level =  4, nx =   32, residual change: 2.90707e-05 → 2.90707e-05
   level =  5, nx =   64, residual change: 4.36992e-05 → 4.36992e-05
   level =  6, nx =  128, residual change: 4.85557e-05 → 4.85557e-05
-cycle 5: relative err = 3.301203452101295e-05, residual err = 1.1068869940931348e-08
+cycle 5: relative err = 3.301203447716335e-05, residual err = 1.1068868945958364e-08
 
 &lt;&lt;&lt; beginning V-cycle (cycle 6) &gt;&gt;&gt;
 
@@ -490,39 +887,39 @@ cycle 5: relative err = 3.301203452101295e-05, residual err = 1.1068869940931348
   level =  5, nx =   64, residual change: 6.19593e-07 → 7.90474e-07
   level =  4, nx =   32, residual change: 5.58852e-07 → 5.36009e-07
   level =  3, nx =   16, residual change: 3.78756e-07 → 1.10732e-07
-  level =  2, nx =    8, residual change: 7.80911e-08 → 1.17096e-10
-  level =  1, nx =    4, residual change: 8.06978e-11 → 1.16893e-15
+  level =  2, nx =    8, residual change: 7.80911e-08 → 1.17095e-10
+  level =  1, nx =    4, residual change: 8.06977e-11 → 5.69861e-16
   bottom solve
-  level =  1, nx =    4, residual change: 2.12408e-15 → 2.12408e-15
+  level =  1, nx =    4, residual change:  1.0355e-15 →  1.0355e-15
   level =  2, nx =    8, residual change: 1.28541e-10 → 1.28541e-10
   level =  3, nx =   16, residual change: 1.45795e-07 → 1.45795e-07
   level =  4, nx =   32, residual change:  7.4452e-07 →  7.4452e-07
   level =  5, nx =   64, residual change: 1.12439e-06 → 1.12439e-06
   level =  6, nx =  128, residual change: 1.25658e-06 → 1.25658e-06
-cycle 6: relative err = 8.544249105967869e-07, residual err = 2.881994789253225e-10
+cycle 6: relative err = 8.544249588823554e-07, residual err = 2.88200772432267e-10
 
 &lt;&lt;&lt; beginning V-cycle (cycle 7) &gt;&gt;&gt;
 
-  level =  6, nx =  128, residual change: 2.34556e-08 →  2.2753e-08
+  level =  6, nx =  128, residual change: 2.34558e-08 → 2.27531e-08
   level =  5, nx =   64, residual change:  1.6088e-08 → 2.03781e-08
   level =  4, nx =   32, residual change: 1.44068e-08 → 1.37252e-08
   level =  3, nx =   16, residual change: 9.69812e-09 → 2.83563e-09
-  level =  2, nx =    8, residual change: 1.99971e-09 → 2.99735e-12
-  level =  1, nx =    4, residual change: 2.06578e-12 →  2.5991e-16
+  level =  2, nx =    8, residual change: 1.99971e-09 → 2.99732e-12
+  level =  1, nx =    4, residual change: 2.06576e-12 → 1.74907e-17
   bottom solve
-  level =  1, nx =    4, residual change: 4.72286e-16 → 4.72286e-16
-  level =  2, nx =    8, residual change: 3.29055e-12 → 3.29055e-12
+  level =  1, nx =    4, residual change: 3.17826e-17 → 3.17826e-17
+  level =  2, nx =    8, residual change: 3.29051e-12 → 3.29051e-12
   level =  3, nx =   16, residual change: 3.73325e-09 → 3.73325e-09
   level =  4, nx =   32, residual change: 1.90594e-08 → 1.90594e-08
-  level =  5, nx =   64, residual change: 2.89958e-08 → 2.89958e-08
-  level =  6, nx =  128, residual change: 3.26637e-08 → 3.26637e-08
-cycle 7: relative err = 2.2106792550668474e-08, residual err = 7.534664141565362e-12
+  level =  5, nx =   64, residual change: 2.89959e-08 → 2.89959e-08
+  level =  6, nx =  128, residual change: 3.26638e-08 → 3.26638e-08
+cycle 7: relative err = 2.210681933627904e-08, residual err = 7.534885150074738e-12
 
 </pre></div></div>
 </div>
 </section>
 <section id="Visualizing-the-solution">
-<h2>Visualizing the solution<a class="headerlink" href="#Visualizing-the-solution" title="Permalink to this heading"></a></h2>
+<h2>Visualizing the solution<a class="headerlink" href="#Visualizing-the-solution" title="Link to this heading">#</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
 </pre></div>
@@ -550,7 +947,7 @@ cycle 7: relative err = 2.2106792550668474e-08, residual err = 7.534664141565362
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.colorbar.Colorbar at 0x7f18a811e2c0&gt;
+&lt;matplotlib.colorbar.Colorbar at 0x7fa980560110&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -562,7 +959,7 @@ cycle 7: relative err = 2.2106792550668474e-08, residual err = 7.534664141565362
 </div>
 </section>
 <section id="Comparing-to-the-exact-solution">
-<h2>Comparing to the exact solution<a class="headerlink" href="#Comparing-to-the-exact-solution" title="Permalink to this heading"></a></h2>
+<h2>Comparing to the exact solution<a class="headerlink" href="#Comparing-to-the-exact-solution" title="Link to this heading">#</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
 </pre></div>
@@ -618,7 +1015,7 @@ error =      9.754984685e-05
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.colorbar.Colorbar at 0x7f18a8086ef0&gt;
+&lt;matplotlib.colorbar.Colorbar at 0x7fa9805c9d50&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -632,34 +1029,107 @@ error =      9.754984685e-05
 </section>
 
 
-           </div>
-          </div>
-          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="multigrid-constant-coefficients.html" class="btn btn-neutral float-left" title="Constant-Coefficient Poisson Equation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="multigrid-general-linear.html" class="btn btn-neutral float-right" title="General Linear Elliptic Equation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-    </div>
+                </article>
+              
 
-  <hr/>
-
-  <div role="contentinfo">
-    <p>&#169; Copyright 2023, pyro development team.</p>
-  </div>
-
-  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   
-
-</footer>
-        </div>
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="multigrid-constant-coefficients.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Constant-Coefficient Poisson Equation</p>
       </div>
-    </section>
-  </div>
-  <script>
-      jQuery(function () {
-          SphinxRtdTheme.Navigation.enable(true);
-      });
-  </script> 
+    </a>
+    <a class="right-next"
+       href="multigrid-general-linear.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">General Linear Elliptic Equation</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <dialog id="pst-secondary-sidebar-modal"></dialog>
+                <div id="pst-secondary-sidebar" class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
 
-</body>
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Setting-up-the-solver">Setting up the solver</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Solving-the-system">Solving the system</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Visualizing-the-solution">Visualizing the solution</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#Comparing-to-the-exact-solution">Comparing to the exact solution</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By pyro development team
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2024, pyro development team.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script defer src="_static/scripts/bootstrap.js?digest=8878045cc6db502f8baf"></script>
+<script defer src="_static/scripts/pydata-sphinx-theme.js?digest=8878045cc6db502f8baf"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
 </html>
